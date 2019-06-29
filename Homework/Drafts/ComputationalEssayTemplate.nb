@@ -10,39 +10,1442 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2498,         79]
-NotebookOptionsPosition[      1424,         43]
-NotebookOutlinePosition[      2402,         77]
-CellTagsIndexPosition[      2336,         72]
+NotebookDataLength[     64428,       1562]
+NotebookOptionsPosition[     58498,       1446]
+NotebookOutlinePosition[     59461,       1479]
+CellTagsIndexPosition[     59392,       1474]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[TextData[{
- "< Essay Title ",
- StyleBox["(The first cell that is formatted as \[OpenCurlyDoubleQuote]Title\
-\[CloseCurlyDoubleQuote] will be the title we use for your essay) ",
-  FontSize->16],
- ">"
-}], "Title",
+Cell["Rocket Equation", "Title",
  CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
   3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770373672636671*^9, 
-  3.7703737875292807`*^9}},
+  3.7703737875292807`*^9}, {3.770719870961752*^9, 3.770719872990241*^9}},
  CellTags->"Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
 
-Cell["< First and Last name>", "Text",
+Cell["Thomas McBride", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
-  3.77005561844785*^9, 
-  3.7700556489651537`*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
-fa93ec9acae9"]
+  3.77005561844785*^9, 3.7700556489651537`*^9}, {3.770719861598662*^9, 
+  3.770719865291979*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+fa93ec9acae9"],
+
+Cell[CellGroupData[{
+
+Cell["Conservation of Momentum", "Subsection",
+ CellChangeTimes->{{3.770719878411162*^9, 
+  3.770719884554509*^9}},ExpressionUUID->"1329a930-288d-445e-a189-\
+d1d627069518"],
+
+Cell[TextData[{
+ "The beginning of this derivation is rooted in the conservation of momentum, \
+P. The below equation relates the momentum of the rocket before and after the \
+expulsion of a small mass, ",
+ Cell[BoxData[
+  SubscriptBox["\[DoubleStruckD]m", "Rocket"]],
+  CellChangeTimes->{{3.7707181260117807`*^9, 3.770718145425578*^9}},
+  ExpressionUUID->"569e5910-3710-4e38-98dd-248015ee62e0"],
+ ", at a velocity relative to the rocket of ",
+ Cell[BoxData[
+  SubscriptBox["u", "e"]],
+  CellChangeTimes->{3.7707181260117807`*^9},ExpressionUUID->
+  "aba19178-302b-4ab2-96f3-b5072a72eeee"],
+ ", during a time dt:"
+}], "Text",
+ CellChangeTimes->{{3.770719890749772*^9, 3.770719896512841*^9}, {
+  3.770720296689266*^9, 3.770720302768591*^9}, {3.7707527310234537`*^9, 
+  3.7707527403665857`*^9}, {3.770752813168274*^9, 3.7707528137653522`*^9}, {
+  3.7707575744615507`*^9, 
+  3.770757605113111*^9}},ExpressionUUID->"832cdf5c-e0c3-406b-8d61-\
+ea2c7047115b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", "==", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["m", "Rocket"], " ", "-", " ", 
+      SubscriptBox["\[DoubleStruckD]m", "Rocket"]}], ")"}], " ", "*", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["v", "Rocket"], " ", "+", " ", "\[DoubleStruckD]v"}], 
+     ")"}]}], " ", "+", " ", 
+   RowBox[{
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"], " ", "*", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["v", "Rocket"], " ", "-", " ", 
+      SubscriptBox["u", "e"]}], ")"}]}], "-", " ", 
+   RowBox[{
+    SubscriptBox["m", "Rocket"], "*", 
+    SubscriptBox["v", "Rocket"]}]}]}]], "Input",
+ CellChangeTimes->{{3.770752778362589*^9, 3.770752806461295*^9}, {
+   3.7707528650938387`*^9, 3.770752948041491*^9}, {3.770752994168378*^9, 
+   3.7707530296577787`*^9}, 3.770753093014139*^9, {3.770758448795121*^9, 
+   3.7707584524248457`*^9}},
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"21b52e94-804c-44ab-bd70-b692a11b502b"],
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", "\[Equal]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["m", "Rocket"]}], " ", 
+    SubscriptBox["v", "Rocket"]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[DoubleStruckD]v", "+", 
+      SubscriptBox["v", "Rocket"]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["m", "Rocket"], "-", 
+      SubscriptBox["\[DoubleStruckD]m", "Rocket"]}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       SubscriptBox["u", "e"]}], "+", 
+      SubscriptBox["v", "Rocket"]}], ")"}], " ", 
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"]}]}]}]], "Output",
+ CellChangeTimes->{
+  3.7707199021904163`*^9, 3.7707209145901546`*^9, 3.770720964989706*^9, 
+   3.770752827859885*^9, 3.770753002651514*^9, 3.77075303266602*^9, {
+   3.7707530936608562`*^9, 3.770753109851767*^9}, 3.770758473992133*^9},
+ CellLabel->
+  "Out[108]=",ExpressionUUID->"fef7918d-be80-427f-b39e-e87d607eee04"]
+}, {2}]],
+
+Cell["Simplifying this yields:", "Text",
+ CellChangeTimes->{{3.7707584846864433`*^9, 
+  3.770758524319503*^9}},ExpressionUUID->"758f0474-a6db-432f-a0c8-\
+2e2ee866baa8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", "\[Equal]", 
+  RowBox[{
+   RowBox[{"\[DoubleStruckD]v", " ", 
+    SubscriptBox["m", "Rocket"]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[DoubleStruckD]v", "+", 
+      SubscriptBox["u", "e"]}], ")"}], " ", 
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"]}]}]}]], "Input",
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"22c9bf76-5a15-44ac-8eea-f5c84b262d65"],
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", "\[Equal]", 
+  RowBox[{
+   RowBox[{"\[DoubleStruckD]v", " ", 
+    SubscriptBox["m", "Rocket"]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[DoubleStruckD]v", "+", 
+      SubscriptBox["u", "e"]}], ")"}], " ", 
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"]}]}]}]], "Output",
+ CellChangeTimes->{3.770758461766884*^9},
+ CellLabel->
+  "Out[107]=",ExpressionUUID->"d00a624b-d87f-4f6a-87ab-99d0c5c778a0"]
+}, {2}]],
+
+Cell[TextData[{
+ "We ignore the ",
+ Cell[BoxData[
+  SubscriptBox["\[DoubleStruckD]m", "Rocket"]],
+  CellChangeTimes->{3.7707199021904163`*^9, 3.7707209145901546`*^9, 
+   3.770720964989706*^9, 3.770752827859885*^9, 3.770753002651514*^9, 
+   3.77075303266602*^9},ExpressionUUID->
+  "65697e08-2334-4340-838b-3e2226857b45"],
+ "*\[DoubleStruckD]v term, leaving simply:"
+}], "Text",
+ CellChangeTimes->{{3.770719907485931*^9, 3.7707199081675253`*^9}, {
+   3.770753049217498*^9, 3.770753056318955*^9}, 
+   3.770758546637506*^9},ExpressionUUID->"f9f610af-5568-41a5-9906-\
+87cbd608c3f8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", " ", "==", " ", 
+  RowBox[{
+   RowBox[{"\[DoubleStruckD]v", " ", "*", " ", 
+    SubscriptBox["m", "Rocket"]}], " ", "-", " ", 
+   RowBox[{
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"], " ", "*", " ", 
+    SubscriptBox["u", "e"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7707530657692327`*^9, 3.770753090780991*^9}},
+ CellLabel->
+  "In[620]:=",ExpressionUUID->"49f99190-41e0-4e1e-81bb-7c7ea486e866"],
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", "\[Equal]", 
+  RowBox[{
+   RowBox[{"\[DoubleStruckD]v", " ", 
+    SubscriptBox["m", "Rocket"]}], "-", 
+   RowBox[{
+    SubscriptBox["u", "e"], " ", 
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"]}]}]}]], "Output",
+ CellChangeTimes->{
+  3.770720044721479*^9, 3.770720966398356*^9, {3.77075308592632*^9, 
+   3.7707531116387863`*^9}},
+ CellLabel->
+  "Out[620]=",ExpressionUUID->"94e0ff98-6f00-4e7e-be01-d26de63f1149"]
+}, {2}]],
+
+Cell["\<\
+The change in momentum is equivalent to the impulse of the rocket, or the \
+outside forces, in this case gravity (m*g) multiplied by the time \
+\[CapitalDelta]t during which that force is applied. With a negligible drag:\
+\>", "Text",
+ CellChangeTimes->{
+  3.770719919226248*^9, {3.770753195412487*^9, 3.770753209417982*^9}, 
+   3.7707532394993467`*^9, {3.770753271241547*^9, 3.7707532976860657`*^9}, {
+   3.770753384135515*^9, 3.770753424049623*^9}, 3.770753498214259*^9, {
+   3.770755500024817*^9, 3.770755518898273*^9}, {3.770757557981245*^9, 
+   3.7707575640766077`*^9}},ExpressionUUID->"70911e5e-c93e-4a2f-864f-\
+48af9f410d5a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", " ", "==", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", " ", 
+      SubscriptBox["m", "Rocket"]}], "*", "g"}], ")"}], " ", "*", " ", 
+   "\[DoubleStruckD]t"}]}]], "Input",
+ CellChangeTimes->{{3.770720048276964*^9, 3.7707200489163094`*^9}, {
+   3.7707206361384573`*^9, 3.770720637269332*^9}, 3.770720902626411*^9, {
+   3.770720985371077*^9, 3.770721012125408*^9}, {3.770753314835128*^9, 
+   3.7707533913236017`*^9}, {3.770753432572448*^9, 3.770753441309987*^9}, 
+   3.770753478261878*^9, {3.770755548003808*^9, 3.770755548605424*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"f7349f75-872d-49e5-b814-c1630a39960e"],
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]P", "\[Equal]", 
+  RowBox[{
+   RowBox[{"-", "g"}], " ", "\[DoubleStruckD]t", " ", 
+   SubscriptBox["m", "Rocket"]}]}]], "Output",
+ CellChangeTimes->{3.7707555503608294`*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"86be747e-7780-4d22-9c18-168da23e47f1"]
+}, {2}]],
+
+Cell[TextData[{
+ "The amount of expelled mass during time \[DoubleStruckD]t is assumed to be \
+constant: \[Gamma] = -",
+ Cell[BoxData[
+  SubscriptBox["\[DoubleStruckD]m", "Rocket"]],
+  CellChangeTimes->{{3.7707181260117807`*^9, 3.770718145425578*^9}},
+  ExpressionUUID->"c1bda283-4bd9-4059-97ec-3e53a4dc5cc5"],
+ "/",
+ Cell[BoxData["\[DoubleStruckD]t"],
+  CellChangeTimes->{{3.7707181260117807`*^9, 3.770718145425578*^9}},
+  ExpressionUUID->"9156d7bb-cec3-4d7e-aa8d-d4f2409420d7"],
+ ", where \[Gamma] is the rate of expulsion of mass used in propulsion:"
+}], "Text",
+ CellChangeTimes->{{3.770719974627598*^9, 3.770720032869309*^9}, {
+  3.7707201600817823`*^9, 3.7707201747496967`*^9}, {3.770753511255603*^9, 
+  3.7707535744757833`*^9}, {3.770753723234329*^9, 3.770753743535791*^9}, {
+  3.770756717987125*^9, 3.77075672059195*^9}, {3.770757616267668*^9, 
+  3.7707576451828957`*^9}},ExpressionUUID->"1ca763c1-7a0d-4278-959d-\
+b79466b9f565"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["m", "Rocket"], "[", "t_", "]"}], ":=", " ", 
+  RowBox[{
+   SubscriptBox["m", 
+    RowBox[{"Rocket", ",", "t0"}]], " ", "+", " ", 
+   RowBox[{"\[Gamma]", "*", "t"}]}]}]], "Input",
+ CellChangeTimes->{{3.7707200341424417`*^9, 3.770720094170188*^9}, {
+   3.770720129172874*^9, 3.7707201492382927`*^9}, {3.7707206327691*^9, 
+   3.770720634290619*^9}, 3.7707209042741203`*^9, {3.770720986351466*^9, 
+   3.77072100849876*^9}, {3.770721693110317*^9, 3.770721721700829*^9}, {
+   3.770721779192172*^9, 3.770721780722232*^9}, 3.770753532001495*^9, {
+   3.770753594417336*^9, 3.770753602860976*^9}, {3.770753669739246*^9, 
+   3.770753699872978*^9}, {3.770754048742388*^9, 3.7707541096472607`*^9}, {
+   3.7707542512110443`*^9, 3.770754278805057*^9}, 3.7707544910330048`*^9, {
+   3.770756715778266*^9, 3.77075671600171*^9}},
+ CellLabel->"In[92]:=",ExpressionUUID->"5735337c-709e-4d07-87d2-389d955866d4"],
+
+Cell["Using two previously established equation of \[CapitalDelta]P, we \
+get:", "Text",
+ CellChangeTimes->{{3.770754539884302*^9, 3.77075456817343*^9}, {
+  3.77075766584586*^9, 
+  3.770757666762155*^9}},ExpressionUUID->"5bda1a8c-fefe-442a-9efb-\
+6b405536fdb0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[DoubleStruckD]v", " ", 
+    SubscriptBox["m", "Rocket"]}], "-", 
+   RowBox[{
+    SubscriptBox["u", "e"], " ", 
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"]}]}], " ", "==", 
+  RowBox[{"\[DoubleStruckD]t", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "g"}], " ", 
+     SubscriptBox["m", "Rocket"]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.7707538249643593`*^9, 3.770753837393466*^9}, 
+   3.770755577578006*^9},
+ CellLabel->"In[20]:=",ExpressionUUID->"e3b9edb7-4967-43d0-b327-2fddf71b09f3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[DoubleStruckD]v", " ", 
+    SubscriptBox["m", "Rocket"]}], "-", 
+   RowBox[{
+    SubscriptBox["u", "e"], " ", 
+    SubscriptBox["\[DoubleStruckD]m", "Rocket"]}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"-", "g"}], " ", "\[DoubleStruckD]t", " ", 
+   SubscriptBox["m", "Rocket"]}]}]], "Output",
+ CellChangeTimes->{3.770753851747918*^9, 3.770754286279376*^9, 
+  3.7707555797857924`*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"49acec3f-a215-45b2-b732-508974d52828"]
+}, {2}]],
+
+Cell["Leading to the rocket equation:", "Text",
+ CellChangeTimes->{{3.7707546049306498`*^9, 
+  3.77075461597639*^9}},ExpressionUUID->"9582416a-3a50-407c-b8d8-\
+802bf73a1384"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rocketEq", "=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"v", "[", "t", "]"}], ",", " ", "t"}], "]"}], "==", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "g"}], " ", "-", 
+      RowBox[{
+       SubscriptBox["u", "e"], 
+       RowBox[{"\[Gamma]", " ", "/", 
+        RowBox[{
+         SubscriptBox["m", "Rocket"], "[", "t", "]"}]}]}]}], ")"}]}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.770753857798998*^9, 3.770753942992437*^9}, {
+   3.770753977466539*^9, 3.770754018783428*^9}, {3.770754336599216*^9, 
+   3.770754349071184*^9}, {3.770755625762163*^9, 3.770755642141618*^9}, {
+   3.770755672555482*^9, 3.7707556939823503`*^9}, {3.770755747125989*^9, 
+   3.770755752352933*^9}, {3.770755795927506*^9, 3.770755796207876*^9}, {
+   3.770756230114637*^9, 3.770756231317212*^9}, {3.770756319823494*^9, 
+   3.77075632470717*^9}, {3.770756801987747*^9, 3.770756802239057*^9}, 
+   3.770757497590575*^9},
+ CellLabel->"In[90]:=",ExpressionUUID->"7b91a3a9-9212-4067-a495-9af9640f19c2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["v", "\[Prime]",
+    MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"-", "g"}], "-", 
+   FractionBox[
+    RowBox[{"\[Gamma]", " ", 
+     SubscriptBox["u", "e"]}], 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "t"}], " ", "\[Gamma]"}], "+", 
+     SubscriptBox["m", 
+      RowBox[{"Rocket", ",", "t0"}]]}]]}]}]], "Output",
+ CellChangeTimes->{
+  3.7707539641108847`*^9, 3.770754019341443*^9, 3.770754081263435*^9, {
+   3.770754123337069*^9, 3.7707541434111557`*^9}, 3.7707541759876537`*^9, 
+   3.77075428767806*^9, 3.770754350443255*^9, {3.770755673523046*^9, 
+   3.770755694366177*^9}, 3.770755754798736*^9, 3.7707557972450247`*^9, 
+   3.7707561820930758`*^9, 3.770756231882813*^9, {3.770756332434648*^9, 
+   3.770756338583921*^9}, 3.7707568026721077`*^9, 3.770757498716016*^9},
+ CellLabel->"Out[90]=",ExpressionUUID->"97a0addb-f5e2-49d6-96db-958e7e916fc1"]
+}, {2}]],
+
+Cell["We can integrate the equation, assuming no initial velocity:", "Text",
+ CellChangeTimes->{{3.7707202569576483`*^9, 3.770720281943013*^9}, {
+  3.7707203713625917`*^9, 3.770720389093083*^9}, {3.770754625393408*^9, 
+  3.7707546587967863`*^9}},ExpressionUUID->"639e127b-f606-4427-9ab0-\
+ed4b1cde2a4a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vsolv", "=", 
+   RowBox[{"v", "/.", 
+    RowBox[{"Flatten", "@", 
+     RowBox[{"DSolve", "[", 
+      RowBox[{
+       RowBox[{"rocketEq", " ", "&&", " ", 
+        RowBox[{
+         RowBox[{"v", "[", "0", "]"}], "\[Equal]", "0"}]}], ",", " ", "v", 
+       ",", "t"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"vsolv", "[", "t", "]"}]}], "Input",
+ CellChangeTimes->{{3.77075432897221*^9, 3.77075440849524*^9}, {
+   3.770756277220324*^9, 3.77075630716753*^9}, 3.770757091472048*^9, {
+   3.7707585992779627`*^9, 3.7707586177393703`*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"75586f77-9a83-479f-b682-f15afcfaa1d9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "g"}], " ", "t"}], "+", 
+  RowBox[{
+   RowBox[{"Log", "[", 
+    RowBox[{
+     RowBox[{"t", " ", "\[Gamma]"}], "-", 
+     SubscriptBox["m", 
+      RowBox[{"Rocket", ",", "t0"}]]}], "]"}], " ", 
+   SubscriptBox["u", "e"]}], "-", 
+  RowBox[{
+   RowBox[{"Log", "[", 
+    RowBox[{"-", 
+     SubscriptBox["m", 
+      RowBox[{"Rocket", ",", "t0"}]]}], "]"}], " ", 
+   SubscriptBox["u", "e"]}]}]], "Output",
+ CellChangeTimes->{{3.770754361799012*^9, 3.770754410929316*^9}, {
+   3.770755770531025*^9, 3.770755798337611*^9}, 3.770756233982254*^9, 
+   3.770756334339789*^9, 3.770756805195632*^9, 3.770757092547688*^9, 
+   3.770757500761868*^9, {3.7707586063907623`*^9, 3.770758618089037*^9}},
+ CellLabel->
+  "Out[114]=",ExpressionUUID->"71e64552-d037-40b3-859b-495f2a43766c"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Application", "Subsection",
+ CellChangeTimes->{{3.7707212126924686`*^9, 
+  3.770721219415366*^9}},ExpressionUUID->"baa9e950-a6fc-4811-838c-\
+58bb34a41885"],
+
+Cell[TextData[{
+ "The biggest implication of the rocket equation is the exponential nature of \
+the mass ratio (",
+ Cell[BoxData[
+  SubscriptBox["m", "Rocket"]],
+  CellChangeTimes->{{3.770753857798998*^9, 3.770753942992437*^9}, {
+    3.770753977466539*^9, 3.770754018783428*^9}, {3.770754336599216*^9, 
+    3.770754349071184*^9}, {3.770755625762163*^9, 3.770755642141618*^9}, {
+    3.770755672555482*^9, 3.7707556939823503`*^9}, {3.770755747125989*^9, 
+    3.770755752352933*^9}, {3.770755795927506*^9, 3.770755796207876*^9}, {
+    3.770756230114637*^9, 3.770756231317212*^9}, {3.770756319823494*^9, 
+    3.77075632470717*^9}, {3.770756801987747*^9, 3.770756802239057*^9}, 
+    3.770757497590575*^9},ExpressionUUID->
+  "50c1749e-5e75-44e9-b91f-5c9f6470c10a"],
+ "[t]/",
+ Cell[BoxData[
+  SubscriptBox["m", 
+   RowBox[{"Rocket", ",", "t0"}]]],
+  CellChangeTimes->{{3.770753857798998*^9, 3.770753942992437*^9}, {
+    3.770753977466539*^9, 3.770754018783428*^9}, {3.770754336599216*^9, 
+    3.770754349071184*^9}, {3.770755625762163*^9, 3.770755642141618*^9}, {
+    3.770755672555482*^9, 3.7707556939823503`*^9}, {3.770755747125989*^9, 
+    3.770755752352933*^9}, {3.770755795927506*^9, 3.770755796207876*^9}, {
+    3.770756230114637*^9, 3.770756231317212*^9}, {3.770756319823494*^9, 
+    3.77075632470717*^9}, {3.770756801987747*^9, 3.770756802239057*^9}, 
+    3.770757497590575*^9},ExpressionUUID->
+  "e5f6cbbd-b9f0-4168-95f0-9924e9effab9"],
+ ")to the velocity ratio (\[CapitalDelta]V/",
+ Cell[BoxData[
+  SubscriptBox["u", "e"]],
+  CellChangeTimes->{{3.770753857798998*^9, 3.770753942992437*^9}, {
+    3.770753977466539*^9, 3.770754018783428*^9}, {3.770754336599216*^9, 
+    3.770754349071184*^9}, {3.770755625762163*^9, 3.770755642141618*^9}, {
+    3.770755672555482*^9, 3.7707556939823503`*^9}, {3.770755747125989*^9, 
+    3.770755752352933*^9}, {3.770755795927506*^9, 3.770755796207876*^9}, {
+    3.770756230114637*^9, 3.770756231317212*^9}, {3.770756319823494*^9, 
+    3.77075632470717*^9}, {3.770756801987747*^9, 3.770756802239057*^9}, 
+    3.770757497590575*^9},ExpressionUUID->
+  "eb917d4a-bde3-4a65-93db-bc47d17b614b"],
+ "). Shown below, as the velocity ratio increases (or, as the deltaV demand \
+increases), the mass ratio must increase exponentially. This essentially \
+means that going faster requires exponentially more fuel. Manipulate the \
+slider to see the impact of changing the exhaust velocity."
+}], "Text",
+ CellChangeTimes->{{3.770756982443862*^9, 3.7707569846955433`*^9}, {
+  3.77075769176719*^9, 3.770757706049746*^9}, {3.770757803824128*^9, 
+  3.770757884765086*^9}},ExpressionUUID->"f3f1cb7f-b837-42c6-8003-\
+0c3527f68041"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"MassRatio", "[", 
+    RowBox[{"$deltaV_", ",", "$exhaustVelocity_"}], "]"}], ":=", 
+   RowBox[{"Exp", "[", 
+    RowBox[{"$deltaV", "/", "$exhaustVelocity"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"MassRatio", "[", 
+      RowBox[{"$deltaV", ",", "ExhaustVelocity"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"$deltaV", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", 
+      "\"\<Impact of Exhaust Velocity on Mass Ratio\>\""}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Velocity Ratio\>\"", ",", "\"\<Mass Ratio\>\""}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExhaustVelocity", ",", "1", ",", "10"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellLabel->"In[51]:=",ExpressionUUID->"547c4f59-ea20-4627-8dce-f06dcc4194b8"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`ExhaustVelocity$$ = 1.45, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`ExhaustVelocity$$], 1, 10}}, Typeset`size$$ = {
+    360., {103., 108.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`ExhaustVelocity$48908$$ = 0}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`ExhaustVelocity$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`ExhaustVelocity$$, \
+$CellContext`ExhaustVelocity$48908$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`MassRatio[$CellContext`$deltaV, \
+$CellContext`ExhaustVelocity$$], {$CellContext`$deltaV, 0, 10}, PlotLabel -> 
+        "Impact of Exhaust Velocity on Mass Ratio", 
+        AxesLabel -> {"Velocity Ratio", "Mass Ratio"}], 
+      "Specifications" :> {{$CellContext`ExhaustVelocity$$, 1, 10}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {148., 154.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7707569990040607`*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"f6b5cba3-6a4e-42c9-96cc-86ad0f278f98"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ SubscriptBox["I", "sp"]], "Input",
+ CellChangeTimes->{{3.7707579928345613`*^9, 
+  3.7707580369618883`*^9}},ExpressionUUID->"7f2bf6fd-5cb0-4a58-83e3-\
+4d6e002e73ee"]], "Subsubsection",
+ CellChangeTimes->{{3.7707579263927393`*^9, 3.770757944436232*^9}, 
+   3.770758042618984*^9},ExpressionUUID->"91b4832d-1009-4e45-84d3-\
+0f32b3ee90b4"],
+
+Cell["\<\
+Another way to rewrite the rocket equation is to replace the exhaust velocity \
+in the original with a term called specific impulse multiplied by the \
+gravitational constant. \
+\>", "Text",
+ CellChangeTimes->{3.770757019469043*^9, 
+  3.7707579539343348`*^9},ExpressionUUID->"198c6ccf-8864-4d58-adcd-\
+fa3b8584c54c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "t"}], "-", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{
+       RowBox[{"t", " ", "\[Gamma]"}], "-", 
+       SubscriptBox["m", 
+        RowBox[{"Rocket", ",", "t0"}]]}], "]"}], 
+     SubscriptBox["I", "sp"]}], "+", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{"-", 
+       SubscriptBox["m", 
+        RowBox[{"Rocket", ",", "t0"}]]}], "]"}], 
+     SubscriptBox["I", "sp"]}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.770758087018762*^9, 3.770758102135795*^9}},
+ CellLabel->"In[96]:=",ExpressionUUID->"50978169-387d-47c5-bcde-981336d43d2f"],
+
+Cell[BoxData[
+ RowBox[{"g", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "t"}], "-", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{
+       RowBox[{"t", " ", "\[Gamma]"}], "-", 
+       SubscriptBox["m", 
+        RowBox[{"Rocket", ",", "t0"}]]}], "]"}], " ", 
+     SubscriptBox["\[ImaginaryI]", "sp"]}], "+", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{"-", 
+       SubscriptBox["m", 
+        RowBox[{"Rocket", ",", "t0"}]]}], "]"}], " ", 
+     SubscriptBox["\[ImaginaryI]", "sp"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.77075808707134*^9, 3.770758102913237*^9}},
+ CellLabel->"Out[96]=",ExpressionUUID->"93982677-28f8-42a2-bf48-9741fdbfc18a"]
+}, {2}]],
+
+Cell["\<\
+This specific impulse is a property of rocket engines, in which a higher \
+specific impulse is more desirable in most cases. Below is a plot of the mass \
+ratio of different rocket engines as a function of deltaV and their specific \
+impulses. You may also manipulate the slider to see how the mass ratio varies \
+with specific impulse and deltaV.\
+\>", "Text",
+ CellChangeTimes->{{3.7707579560920763`*^9, 
+  3.770757958038663*^9}},ExpressionUUID->"d468bb68-5bf8-487a-877a-\
+10eb4994a977"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MRImpulse", "[", 
+   RowBox[{"$deltaV_", ",", "$specificImpulse_", ",", "$gravity_"}], "]"}], ":=", 
+  RowBox[{"Exp", "[", 
+   RowBox[{"$deltaV", "/", 
+    RowBox[{"(", 
+     RowBox[{"$specificImpulse", "*", "$gravity"}], ")"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"grav", " ", "=", " ", "9.8"}], "}"}], ",", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"MRImpulse", "[", 
+          RowBox[{"$deltaV", ",", "452.3", ",", "grav"}], "]"}], ",", 
+         RowBox[{"MRImpulse", "[", 
+          RowBox[{"$deltaV", ",", "339", ",", "grav"}], "]"}], ",", 
+         RowBox[{"MRImpulse", "[", 
+          RowBox[{"$deltaV", ",", "311", ",", "grav"}], "]"}], ",", 
+         RowBox[{"MRImpulse", "[", 
+          RowBox[{"$deltaV", ",", "361", ",", "grav"}], "]"}], ",", 
+         RowBox[{"MRImpulse", "[", 
+          RowBox[{"$deltaV", ",", "SpecificImpulse", ",", "grav"}], "]"}]}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"$deltaV", ",", "0", ",", "10000"}], "}"}], ",", 
+       RowBox[{"PlotLegends", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<RS25\>\"", ",", "\"\<RD180\>\"", ",", "\"\<Merlin\>\"", ",", 
+          "\"\<Raptor\>\""}], "}"}]}], ",", 
+       RowBox[{
+       "PlotLabel", "\[Rule]", 
+        "\"\<Mass Ratio vs. Velocity Ratio for Different Rocket \
+Engines\>\""}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"SpecificImpulse", ",", "200", ",", "500", ",", "10"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellLabel->"In[53]:=",ExpressionUUID->"afb8f6c8-88ed-4f14-827b-7deda57b178d"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`SpecificImpulse$$ = 210, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`SpecificImpulse$$], 200, 500, 10}}, Typeset`size$$ = {
+    446., {116., 120.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`SpecificImpulse$51452$$ = 0}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`SpecificImpulse$$ = 200}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`SpecificImpulse$$, \
+$CellContext`SpecificImpulse$51452$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> With[{$CellContext`grav$ = 9.8}, 
+        Plot[{
+          $CellContext`MRImpulse[$CellContext`$deltaV, 
+           452.3, $CellContext`grav$], 
+          $CellContext`MRImpulse[$CellContext`$deltaV, 
+           339, $CellContext`grav$], 
+          $CellContext`MRImpulse[$CellContext`$deltaV, 
+           311, $CellContext`grav$], 
+          $CellContext`MRImpulse[$CellContext`$deltaV, 
+           361, $CellContext`grav$], 
+          $CellContext`MRImpulse[$CellContext`$deltaV, \
+$CellContext`SpecificImpulse$$, $CellContext`grav$]}, {$CellContext`$deltaV, 
+          0, 10000}, PlotLegends -> {"RS25", "RD180", "Merlin", "Raptor"}, 
+         PlotLabel -> 
+         "Mass Ratio vs. Velocity Ratio for Different Rocket Engines"]], 
+      "Specifications" :> {{$CellContext`SpecificImpulse$$, 200, 500, 10}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{491., {161., 167.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.770757031197618*^9},
+ CellLabel->"Out[54]=",ExpressionUUID->"bcb402c8-c8dc-4d15-9116-17f776a52212"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Velocity and Altitude of Rockets", "Subsubsection",
+ CellChangeTimes->{{3.7707570495884047`*^9, 
+  3.7707570515869637`*^9}},ExpressionUUID->"2eeabd28-8d76-4be3-9046-\
+6e3150b86da4"],
+
+Cell["\<\
+Using the rocket equation, it is also possible to calculate the velocity and \
+position of a rocket with respect to time. Below is a simulation of a \
+single-stage rocket. Manipulate the different constants to see how they \
+impact both the velocity and the trajectory of the rocket.\
+\>", "Text",
+ CellChangeTimes->{
+  3.7707570597030287`*^9, {3.770758138386058*^9, 
+   3.770758143917301*^9}},ExpressionUUID->"6ebbcc5a-a861-4fd6-be38-\
+9baed2e8a497"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"massRocket", "[", 
+    RowBox[{
+    "$structuralMass_", ",", "$initialMassPropellant_", ",", 
+     "$expulsionRate_"}], "]"}], "[", "t_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "$structuralMass", "+", "$initialMassPropellant", " ", "-", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}], ",", 
+       RowBox[{"$initialMassPropellant", " ", ">", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"$structuralMass", ",", 
+       RowBox[{"$initialMassPropellant", " ", "\[LessEqual]", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"thrust", "[", 
+    RowBox[{
+    "$expulsionRate_", ",", "$exhaustVelocity_", ",", 
+     "$initialMassPropellant_"}], "]"}], "[", "t_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"$expulsionRate", " ", "*", " ", "$exhaustVelocity"}], ",", 
+       RowBox[{"$initialMassPropellant", " ", ">", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"$initialMassPropellant", " ", "\[LessEqual]", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vsol", "[", 
+   RowBox[{
+   "$g_", ",", "$expulsionRate_", ",", "$initialMassPropellant_", ",", 
+    "$structuralMass_", ",", "$exhaustVelocity_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"v", "/.", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{
+          RowBox[{"-", "$g"}], "+", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"thrust", "[", 
+             RowBox[{
+             "$expulsionRate", ",", "$exhaustVelocity", ",", 
+              "$initialMassPropellant"}], "]"}], "[", "t", "]"}], "/", 
+           RowBox[{
+            RowBox[{"massRocket", "[", 
+             RowBox[{
+             "$structuralMass", ",", "$initialMassPropellant", ",", 
+              "$expulsionRate"}], "]"}], "[", "t", "]"}]}]}]}], ",", 
+        RowBox[{
+         RowBox[{"v", "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", "v", 
+      ",", "t"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", " ", "=", " ", 
+       RowBox[{"vsol", "[", 
+        RowBox[{
+        "g", ",", "ExpulsionRate", ",", "InitialMassPropellant", ",", 
+         "StructuralMass", ",", "ExhaustVelocity"}], "]"}]}], "}"}], ",", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "10"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+       RowBox[{
+       "PlotLabel", "\[Rule]", "\"\<Velocity of Rocket vs. Time\>\""}], ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Time (s)\>\"", ",", "\"\<Velocity (m/s)\>\""}], 
+         "}"}]}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"StructuralMass", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"InitialMassPropellant", ",", "1000", ",", "2000", ",", "100"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExpulsionRate", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"g", ",", "1", ",", "10", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExhaustVelocity", ",", "100", ",", "1000", ",", "100"}], "}"}]}],
+   "]"}]}], "Input",
+ CellChangeTimes->{3.770757069330194*^9},
+ CellLabel->"In[70]:=",ExpressionUUID->"4749b358-ad8c-4000-b444-342110d9ec84"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`ExhaustVelocity$$ = 
+    100, $CellContext`ExpulsionRate$$ = 100, $CellContext`g$$ = 
+    1, $CellContext`InitialMassPropellant$$ = 
+    1000, $CellContext`StructuralMass$$ = 100, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`StructuralMass$$], 100, 1000, 100}, {
+      Hold[$CellContext`InitialMassPropellant$$], 1000, 2000, 100}, {
+      Hold[$CellContext`ExpulsionRate$$], 100, 1000, 100}, {
+      Hold[$CellContext`g$$], 1, 10, 1}, {
+      Hold[$CellContext`ExhaustVelocity$$], 100, 1000, 100}}, 
+    Typeset`size$$ = {360., {109., 114.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`StructuralMass$56197$$ = 
+    0, $CellContext`InitialMassPropellant$56198$$ = 
+    0, $CellContext`ExpulsionRate$56199$$ = 0, $CellContext`g$56200$$ = 
+    0, $CellContext`ExhaustVelocity$56201$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`ExhaustVelocity$$ = 
+        100, $CellContext`ExpulsionRate$$ = 100, $CellContext`g$$ = 
+        1, $CellContext`InitialMassPropellant$$ = 
+        1000, $CellContext`StructuralMass$$ = 100}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`StructuralMass$$, \
+$CellContext`StructuralMass$56197$$, 0], 
+        Hold[$CellContext`InitialMassPropellant$$, \
+$CellContext`InitialMassPropellant$56198$$, 0], 
+        Hold[$CellContext`ExpulsionRate$$, $CellContext`ExpulsionRate$56199$$,
+          0], 
+        Hold[$CellContext`g$$, $CellContext`g$56200$$, 0], 
+        Hold[$CellContext`ExhaustVelocity$$, \
+$CellContext`ExhaustVelocity$56201$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      With[{$CellContext`v = $CellContext`vsol[$CellContext`g$$, \
+$CellContext`ExpulsionRate$$, $CellContext`InitialMassPropellant$$, \
+$CellContext`StructuralMass$$, $CellContext`ExhaustVelocity$$]}, 
+        Plot[
+         $CellContext`v[$CellContext`t], {$CellContext`t, 0, 10}, PlotRange -> 
+         All, PlotLabel -> "Velocity of Rocket vs. Time", 
+         AxesLabel -> {"Time (s)", "Velocity (m/s)"}]], 
+      "Specifications" :> {{$CellContext`StructuralMass$$, 100, 1000, 
+         100}, {$CellContext`InitialMassPropellant$$, 1000, 2000, 
+         100}, {$CellContext`ExpulsionRate$$, 100, 1000, 
+         100}, {$CellContext`g$$, 1, 10, 1}, {$CellContext`ExhaustVelocity$$, 
+         100, 1000, 100}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {210., 216.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.770757072287977*^9, 3.770757122528926*^9}},
+ CellLabel->"Out[73]=",ExpressionUUID->"3939234b-56b2-4a19-ba9c-5c1bd57d3ae2"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"xsol", "[", 
+   RowBox[{
+   "$g_", ",", "$expulsionRate_", ",", "$initialMassPropellant_", ",", 
+    "$structuralMass_", ",", "$exhaustVelocity_"}], "]"}], ":=", 
+  RowBox[{"x", "/.", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"NDSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{
+          RowBox[{"vsol", "[", 
+           RowBox[{
+           "$g", ",", "$expulsionRate", ",", "$initialMassPropellant", ",", 
+            "$structuralMass", ",", "$exhaustVelocity"}], "]"}], "[", "t", 
+          "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", "x", 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "5"}], "}"}]}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y", "=", " ", 
+       RowBox[{"xsol", "[", 
+        RowBox[{
+        "g", ",", "ExpulsionRate", ",", "InitialMassPropellant", ",", 
+         "StructuralMass", ",", "ExhaustVelocity"}], "]"}]}], "}"}], ",", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"y", "[", "t", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "10"}], "}"}], ",", 
+       RowBox[{"PlotLabel", "\[Rule]", "\"\<Altitude of Rocket vs Time\>\""}],
+        ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Time (s)\>\"", ",", "\"\<Altitude (m)\>\""}], "}"}]}]}],
+       "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"StructuralMass", ",", "50000", ",", "1000000", ",", "10000"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "InitialMassPropellant", ",", "50000", ",", "200000", ",", "10000"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExpulsionRate", ",", "1000", ",", "10000", ",", "1000"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"g", ",", "2", ",", "20", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExhaustVelocity", ",", "1000", ",", "3000", ",", "100"}], 
+    "}"}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.770757166235629*^9, 3.770757172698078*^9}, {
+  3.7707583384993877`*^9, 3.7707583559471292`*^9}},
+ CellLabel->
+  "In[104]:=",ExpressionUUID->"88e7a558-86e6-4a1f-a340-78c0ba812a8a"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`ExhaustVelocity$$ = 
+    1000, $CellContext`ExpulsionRate$$ = 1000, $CellContext`g$$ = 
+    2, $CellContext`InitialMassPropellant$$ = 
+    50000, $CellContext`StructuralMass$$ = 50000, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`StructuralMass$$], 50000, 1000000, 10000}, {
+      Hold[$CellContext`InitialMassPropellant$$], 50000, 200000, 10000}, {
+      Hold[$CellContext`ExpulsionRate$$], 1000, 10000, 1000}, {
+      Hold[$CellContext`g$$], 2, 20, 1}, {
+      Hold[$CellContext`ExhaustVelocity$$], 1000, 3000, 100}}, 
+    Typeset`size$$ = {360., {110., 114.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`StructuralMass$134167$$ = 
+    0, $CellContext`InitialMassPropellant$134168$$ = 
+    0, $CellContext`ExpulsionRate$134169$$ = 0, $CellContext`g$134170$$ = 
+    0, $CellContext`ExhaustVelocity$134171$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`ExhaustVelocity$$ = 
+        1000, $CellContext`ExpulsionRate$$ = 1000, $CellContext`g$$ = 
+        2, $CellContext`InitialMassPropellant$$ = 
+        50000, $CellContext`StructuralMass$$ = 50000}, "ControllerVariables" :> {
+        Hold[$CellContext`StructuralMass$$, \
+$CellContext`StructuralMass$134167$$, 0], 
+        Hold[$CellContext`InitialMassPropellant$$, \
+$CellContext`InitialMassPropellant$134168$$, 0], 
+        Hold[$CellContext`ExpulsionRate$$, \
+$CellContext`ExpulsionRate$134169$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$134170$$, 0], 
+        Hold[$CellContext`ExhaustVelocity$$, \
+$CellContext`ExhaustVelocity$134171$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      With[{$CellContext`y = $CellContext`xsol[$CellContext`g$$, \
+$CellContext`ExpulsionRate$$, $CellContext`InitialMassPropellant$$, \
+$CellContext`StructuralMass$$, $CellContext`ExhaustVelocity$$]}, 
+        Plot[
+         $CellContext`y[$CellContext`t], {$CellContext`t, 0, 10}, PlotLabel -> 
+         "Altitude of Rocket vs Time", 
+         AxesLabel -> {"Time (s)", "Altitude (m)"}]], 
+      "Specifications" :> {{$CellContext`StructuralMass$$, 50000, 1000000, 
+         10000}, {$CellContext`InitialMassPropellant$$, 50000, 200000, 
+         10000}, {$CellContext`ExpulsionRate$$, 1000, 10000, 
+         1000}, {$CellContext`g$$, 2, 20, 1}, {$CellContext`ExhaustVelocity$$,
+          1000, 3000, 100}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {211., 217.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7707571734393673`*^9, 3.770758357779276*^9},
+ CellLabel->
+  "Out[105]=",ExpressionUUID->"3bfab4b3-3337-4129-adcb-d46d56d70b5a"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Staging", "Subsubsection",
+ CellChangeTimes->{{3.770757219898745*^9, 
+  3.7707572222441463`*^9}},ExpressionUUID->"01117ff4-60d2-4308-82d5-\
+54bc1e2ebc0d"],
+
+Cell["\<\
+Because of the exponential nature of mass required to obtain a higher deltaV, \
+rocket scientists have optimized rocket development through the use of \
+staging. This means that the rocket will be split into multiple sections, \
+each with an individual propulsion system. Once a stage burns all its fuel, \
+that stage and its additional mass is jettisoned away from the remaining \
+spacecraft, reducing the total mass and enabling the craft to reach higher \
+altitudes. Below is a simulation of a two stage rocket; manipulate the values \
+to gain an understanding of the role each constant plays.\
+\>", "Text",
+ CellChangeTimes->{{3.770757229704649*^9, 3.770757230780221*^9}, {
+  3.770757286654749*^9, 3.770757302807992*^9}, {3.770757346062509*^9, 
+  3.770757401497953*^9}, {3.770758148033285*^9, 
+  3.770758158557309*^9}},ExpressionUUID->"618264a7-d66c-4420-a421-\
+ce748bedc971"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"massFirstRocket", "[", 
+    RowBox[{
+    "$structuralMass_", ",", "$initialMassPropellant_", ",", 
+     "$expulsionRate_", ",", "$structuralMass2_", ",", 
+     "$initialMassPropellant2_"}], "]"}], "[", "t_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "$structuralMass", "+", "$initialMassPropellant", "+", 
+        "$initialMassPropellant2", "+", "$structuralMass2", " ", "-", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}], ",", 
+       RowBox[{"$initialMassPropellant", " ", ">", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"$structuralMass", ",", 
+       RowBox[{"$initialMassPropellant", " ", "\[LessEqual]", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"massSecondRocket", "[", 
+    RowBox[{
+    "$structuralMass2_", ",", "$initialMassPropellant2_", ",", 
+     "$expulsionRate2_"}], "]"}], "[", "t_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "$structuralMass2", "+", "$initialMassPropellant2", " ", "-", " ", 
+        RowBox[{"$expulsionRate2", " ", "*", " ", "t"}]}], ",", 
+       RowBox[{"$initialMassPropellant2", " ", ">", " ", 
+        RowBox[{"$expulsionRate2", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"$structuralMass2", ",", 
+       RowBox[{"$initialMassPropellant2", " ", "\[LessEqual]", " ", 
+        RowBox[{"$expulsionRate2", " ", "*", " ", "t"}]}]}], "}"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"thrustFirst", "[", 
+    RowBox[{
+    "$expulsionRate_", ",", "$exhaustVelocity_", ",", 
+     "$initialMassPropellant_"}], "]"}], "[", "t_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"$expulsionRate", " ", "*", " ", "$exhaustVelocity"}], ",", 
+       RowBox[{"$initialMassPropellant", " ", ">", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"$initialMassPropellant", " ", "\[LessEqual]", " ", 
+        RowBox[{"$expulsionRate", " ", "*", " ", "t"}]}]}], "}"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"thrustSecond", "[", 
+    RowBox[{
+    "$expulsionRate2_", ",", "$exhaustVelocity2_", ",", 
+     "$initialMassPropellant2_"}], "]"}], "[", "t_", "]"}], ":=", 
+  RowBox[{"Piecewise", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"$expulsionRate2", " ", "*", " ", "$exhaustVelocity2"}], ",", 
+       RowBox[{"$initialMassPropellant2", " ", ">", " ", 
+        RowBox[{"$expulsionRate2", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"$initialMassPropellant2", " ", "\[LessEqual]", " ", 
+        RowBox[{"$expulsionRate2", " ", "*", " ", "t"}]}]}], "}"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vsolFirst", "[", 
+   RowBox[{
+   "$g_", ",", "$expulsionRate_", ",", "$initialMassPropellant_", ",", 
+    "$structuralMass_", ",", "$exhaustVelocity_", ",", "$structuralMass2_", 
+    ",", "$initialMassPropellant2_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"v", "/.", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{
+          RowBox[{"-", "$g"}], "+", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"thrustFirst", "[", 
+             RowBox[{
+             "$expulsionRate", ",", "$exhaustVelocity", ",", 
+              "$initialMassPropellant"}], "]"}], "[", "t", "]"}], "/", 
+           RowBox[{
+            RowBox[{"massFirstRocket", "[", 
+             RowBox[{
+             "$structuralMass", ",", "$initialMassPropellant", ",", 
+              "$expulsionRate", ",", "$structuralMass2", ",", 
+              "$initialMassPropellant2"}], "]"}], "[", "t", "]"}]}]}]}], ",", 
+        
+        RowBox[{
+         RowBox[{"v", "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", "v", 
+      ",", "t"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vsolSecond", "[", 
+   RowBox[{
+   "$g_", ",", "$expulsionRate2_", ",", "$initialMassPropellant2_", ",", 
+    "$structuralMass2_", ",", "$exhaustVelocity2_", ",", 
+    "$initialVelocity_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"v", "/.", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{
+          RowBox[{"-", "$g"}], "+", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"thrustSecond", "[", 
+             RowBox[{
+             "$expulsionRate2", ",", "$exhaustVelocity2", ",", 
+              "$initialMassPropellant2"}], "]"}], "[", "t", "]"}], "/", 
+           RowBox[{
+            RowBox[{"massSecondRocket", "[", 
+             RowBox[{
+             "$structuralMass2", ",", "$initialMassPropellant2", ",", 
+              "$expulsionRate2"}], "]"}], "[", "t", "]"}]}]}]}], ",", 
+        RowBox[{
+         RowBox[{"v", "[", "0", "]"}], "\[Equal]", "$initialVelocity"}]}], 
+       "}"}], ",", "v", ",", "t"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"v1", " ", "=", " ", 
+        RowBox[{"vsolFirst", "[", 
+         RowBox[{
+         "g", ",", "ExpulsionRate1", ",", "InitialMassPropellant1", ",", 
+          "StructuralMass1", ",", "ExhaustVelocity1", ",", "StructuralMass2", 
+          ",", "InitialMassPropellant2"}], "]"}]}], ",", 
+       RowBox[{"v2", "=", 
+        RowBox[{"vsolSecond", "[", 
+         RowBox[{
+         "g", ",", "ExpulsionRate2", ",", "InitialMassPropellant2", ",", 
+          "StructuralMass2", ",", "ExhaustVelocity2", ",", 
+          RowBox[{
+           RowBox[{"vsolFirst", "[", 
+            RowBox[{
+            "g", ",", "ExpulsionRate1", ",", "InitialMassPropellant1", ",", 
+             "StructuralMass1", ",", "ExhaustVelocity1", ",", 
+             "StructuralMass2", ",", "InitialMassPropellant2"}], "]"}], "[", 
+           RowBox[{"InitialMassPropellant1", "/", "ExpulsionRate1"}], "]"}]}],
+          "]"}]}]}], "}"}], ",", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Piecewise", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"v1", "[", "t", "]"}], ",", 
+             RowBox[{"InitialMassPropellant1", " ", ">", " ", 
+              RowBox[{"ExpulsionRate1", " ", "*", " ", "t"}]}]}], "}"}], ",", 
+           
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"v2", "[", 
+              RowBox[{"t", "-", 
+               RowBox[{"InitialMassPropellant1", "/", "ExpulsionRate1"}]}], 
+              "]"}], ",", 
+             RowBox[{"(", 
+              RowBox[{"InitialMassPropellant1", " ", "\[LessEqual]", " ", 
+               RowBox[{"ExpulsionRate1", " ", "*", " ", "t"}]}], ")"}]}], 
+            "}"}]}], "}"}], "]"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "30"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"StructuralMass1", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"InitialMassPropellant1", ",", "1000", ",", "2000", ",", "100"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExpulsionRate1", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"g", ",", "1", ",", "10", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExhaustVelocity1", ",", "100", ",", "5000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"StructuralMass2", ",", "100", ",", "2000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"InitialMassPropellant2", ",", "1000", ",", "2000", ",", "100"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ExpulsionRate2", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"ExhaustVelocity2", ",", "100", ",", "1000", ",", "100"}], 
+    "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.770722756683261*^9, 3.770722758409795*^9}, 
+   3.7707572420278788`*^9, {3.7707581699402943`*^9, 3.770758266295315*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"8176f2e5-e136-478f-9478-2bc09bf1cf66"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`ExhaustVelocity1$$ = 
+    100, $CellContext`ExhaustVelocity2$$ = 
+    100, $CellContext`ExpulsionRate1$$ = 100, $CellContext`ExpulsionRate2$$ = 
+    100, $CellContext`g$$ = 1, $CellContext`InitialMassPropellant1$$ = 
+    1000, $CellContext`InitialMassPropellant2$$ = 
+    1000, $CellContext`StructuralMass1$$ = 
+    100, $CellContext`StructuralMass2$$ = 100, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`StructuralMass1$$], 100, 1000, 100}, {
+      Hold[$CellContext`InitialMassPropellant1$$], 1000, 2000, 100}, {
+      Hold[$CellContext`ExpulsionRate1$$], 100, 1000, 100}, {
+      Hold[$CellContext`g$$], 1, 10, 1}, {
+      Hold[$CellContext`ExhaustVelocity1$$], 100, 5000, 100}, {
+      Hold[$CellContext`StructuralMass2$$], 100, 2000, 100}, {
+      Hold[$CellContext`InitialMassPropellant2$$], 1000, 2000, 100}, {
+      Hold[$CellContext`ExpulsionRate2$$], 100, 1000, 100}, {
+      Hold[$CellContext`ExhaustVelocity2$$], 100, 1000, 100}}, 
+    Typeset`size$$ = {327., {98., 103.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`StructuralMass1$115205$$ = 
+    0, $CellContext`InitialMassPropellant1$115206$$ = 
+    0, $CellContext`ExpulsionRate1$115207$$ = 0, $CellContext`g$115208$$ = 
+    0, $CellContext`ExhaustVelocity1$115209$$ = 
+    0, $CellContext`StructuralMass2$115210$$ = 
+    0, $CellContext`InitialMassPropellant2$115211$$ = 
+    0, $CellContext`ExpulsionRate2$115212$$ = 
+    0, $CellContext`ExhaustVelocity2$115213$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`ExhaustVelocity1$$ = 
+        100, $CellContext`ExhaustVelocity2$$ = 
+        100, $CellContext`ExpulsionRate1$$ = 
+        100, $CellContext`ExpulsionRate2$$ = 100, $CellContext`g$$ = 
+        1, $CellContext`InitialMassPropellant1$$ = 
+        1000, $CellContext`InitialMassPropellant2$$ = 
+        1000, $CellContext`StructuralMass1$$ = 
+        100, $CellContext`StructuralMass2$$ = 100}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`StructuralMass1$$, \
+$CellContext`StructuralMass1$115205$$, 0], 
+        Hold[$CellContext`InitialMassPropellant1$$, \
+$CellContext`InitialMassPropellant1$115206$$, 0], 
+        Hold[$CellContext`ExpulsionRate1$$, \
+$CellContext`ExpulsionRate1$115207$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$115208$$, 0], 
+        Hold[$CellContext`ExhaustVelocity1$$, \
+$CellContext`ExhaustVelocity1$115209$$, 0], 
+        Hold[$CellContext`StructuralMass2$$, \
+$CellContext`StructuralMass2$115210$$, 0], 
+        Hold[$CellContext`InitialMassPropellant2$$, \
+$CellContext`InitialMassPropellant2$115211$$, 0], 
+        Hold[$CellContext`ExpulsionRate2$$, \
+$CellContext`ExpulsionRate2$115212$$, 0], 
+        Hold[$CellContext`ExhaustVelocity2$$, \
+$CellContext`ExhaustVelocity2$115213$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      With[{$CellContext`v1$ = $CellContext`vsolFirst[$CellContext`g$$, \
+$CellContext`ExpulsionRate1$$, $CellContext`InitialMassPropellant1$$, \
+$CellContext`StructuralMass1$$, $CellContext`ExhaustVelocity1$$, \
+$CellContext`StructuralMass2$$, $CellContext`InitialMassPropellant2$$], \
+$CellContext`v2$ = $CellContext`vsolSecond[$CellContext`g$$, \
+$CellContext`ExpulsionRate2$$, $CellContext`InitialMassPropellant2$$, \
+$CellContext`StructuralMass2$$, $CellContext`ExhaustVelocity2$$, 
+           $CellContext`vsolFirst[$CellContext`g$$, \
+$CellContext`ExpulsionRate1$$, $CellContext`InitialMassPropellant1$$, \
+$CellContext`StructuralMass1$$, $CellContext`ExhaustVelocity1$$, \
+$CellContext`StructuralMass2$$, \
+$CellContext`InitialMassPropellant2$$][$CellContext`InitialMassPropellant1$$/$\
+CellContext`ExpulsionRate1$$]]}, 
+        Plot[{
+          Piecewise[{{
+             $CellContext`v1$[$CellContext`t], \
+$CellContext`InitialMassPropellant1$$ > $CellContext`ExpulsionRate1$$ \
+$CellContext`t}, {
+             $CellContext`v2$[$CellContext`t - \
+$CellContext`InitialMassPropellant1$$/$CellContext`ExpulsionRate1$$], \
+$CellContext`InitialMassPropellant1$$ <= $CellContext`ExpulsionRate1$$ \
+$CellContext`t}}]}, {$CellContext`t, 0, 30}, PlotRange -> All]], 
+      "Specifications" :> {{$CellContext`StructuralMass1$$, 100, 1000, 
+         100}, {$CellContext`InitialMassPropellant1$$, 1000, 2000, 
+         100}, {$CellContext`ExpulsionRate1$$, 100, 1000, 
+         100}, {$CellContext`g$$, 1, 10, 1}, {$CellContext`ExhaustVelocity1$$,
+          100, 5000, 100}, {$CellContext`StructuralMass2$$, 100, 2000, 
+         100}, {$CellContext`InitialMassPropellant2$$, 1000, 2000, 
+         100}, {$CellContext`ExpulsionRate2$$, 100, 1000, 
+         100}, {$CellContext`ExhaustVelocity2$$, 100, 1000, 100}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{684., {142., 147.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.770757243319242*^9, 3.770757259898271*^9}, 
+   3.770758267976821*^9},
+ CellLabel->
+  "Out[103]=",ExpressionUUID->"ce67824f-41e6-4a72-9bee-27f5dec43a09"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{720, 855},
-WindowMargins->{{360, Automatic}, {Automatic, 0}},
+WindowSize->{825, 815},
+WindowMargins->{{155, Automatic}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -55,8 +1458,7 @@ DockedCells->{
       RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
       40]}], CellFrameMargins -> 10, Background -> 
    RGBColor[0.12, 0.14, 0.15]]},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 11, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -65,21 +1467,102 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "Title"->{
-  Cell[580, 22, 461, 10, 160, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+  Cell[580, 22, 323, 4, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
    CellTags->"Title"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 2195, 66}
+ {"Title", 59253, 1468}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 461, 10, 160, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+Cell[580, 22, 323, 4, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
  CellTags->"Title"],
-Cell[1044, 34, 364, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"]
+Cell[906, 28, 402, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[CellGroupData[{
+Cell[1333, 38, 172, 3, 54, "Subsection",ExpressionUUID->"1329a930-288d-445e-a189-d1d627069518"],
+Cell[1508, 43, 951, 20, 81, "Text",ExpressionUUID->"832cdf5c-e0c3-406b-8d61-ea2c7047115b"],
+Cell[CellGroupData[{
+Cell[2484, 67, 1006, 26, 30, "Input",ExpressionUUID->"21b52e94-804c-44ab-bd70-b692a11b502b"],
+Cell[3493, 95, 978, 27, 34, "Output",ExpressionUUID->"fef7918d-be80-427f-b39e-e87d607eee04"]
+}, {2}]],
+Cell[4483, 125, 168, 3, 35, "Text",ExpressionUUID->"758f0474-a6db-432f-a0c8-2e2ee866baa8"],
+Cell[CellGroupData[{
+Cell[4676, 132, 408, 11, 30, "Input",ExpressionUUID->"22c9bf76-5a15-44ac-8eea-f5c84b262d65"],
+Cell[5087, 145, 451, 12, 34, "Output",ExpressionUUID->"d00a624b-d87f-4f6a-87ab-99d0c5c778a0"]
+}, {2}]],
+Cell[5550, 160, 577, 13, 35, "Text",ExpressionUUID->"f9f610af-5568-41a5-9906-87cbd608c3f8"],
+Cell[CellGroupData[{
+Cell[6152, 177, 441, 10, 30, "Input",ExpressionUUID->"49f99190-41e0-4e1e-81bb-7c7ea486e866"],
+Cell[6596, 189, 458, 12, 34, "Output",ExpressionUUID->"94e0ff98-6f00-4e7e-be01-d26de63f1149"]
+}, {2}]],
+Cell[7066, 204, 642, 11, 58, "Text",ExpressionUUID->"70911e5e-c93e-4a2f-864f-48af9f410d5a"],
+Cell[CellGroupData[{
+Cell[7733, 219, 675, 13, 30, "Input",ExpressionUUID->"f7349f75-872d-49e5-b814-c1630a39960e"],
+Cell[8411, 234, 291, 6, 34, "Output",ExpressionUUID->"86be747e-7780-4d22-9c18-168da23e47f1"]
+}, {2}]],
+Cell[8714, 243, 937, 18, 58, "Text",ExpressionUUID->"1ca763c1-7a0d-4278-959d-b79466b9f565"],
+Cell[9654, 263, 941, 17, 33, "Input",ExpressionUUID->"5735337c-709e-4d07-87d2-389d955866d4"],
+Cell[10598, 282, 261, 5, 35, "Text",ExpressionUUID->"5bda1a8c-fefe-442a-9efb-6b405536fdb0"],
+Cell[CellGroupData[{
+Cell[10884, 291, 552, 15, 30, "Input",ExpressionUUID->"e3b9edb7-4967-43d0-b327-2fddf71b09f3"],
+Cell[11439, 308, 508, 13, 34, "Output",ExpressionUUID->"49acec3f-a215-45b2-b732-508974d52828"]
+}, {2}]],
+Cell[11959, 324, 174, 3, 35, "Text",ExpressionUUID->"9582416a-3a50-407c-b8d8-802bf73a1384"],
+Cell[CellGroupData[{
+Cell[12158, 331, 1046, 24, 30, "Input",ExpressionUUID->"7b91a3a9-9212-4067-a495-9af9640f19c2"],
+Cell[13207, 357, 940, 22, 53, "Output",ExpressionUUID->"97a0addb-f5e2-49d6-96db-958e7e916fc1"]
+}, {2}]],
+Cell[14159, 382, 303, 4, 35, "Text",ExpressionUUID->"639e127b-f606-4427-9ab0-ed4b1cde2a4a"],
+Cell[CellGroupData[{
+Cell[14487, 390, 663, 16, 52, "Input",ExpressionUUID->"75586f77-9a83-479f-b682-f15afcfaa1d9"],
+Cell[15153, 408, 815, 22, 37, "Output",ExpressionUUID->"71e64552-d037-40b3-859b-495f2a43766c"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16014, 436, 161, 3, 54, "Subsection",ExpressionUUID->"baa9e950-a6fc-4811-838c-58bb34a41885"],
+Cell[16178, 441, 2646, 47, 110, "Text",ExpressionUUID->"f3f1cb7f-b837-42c6-8003-0c3527f68041"],
+Cell[CellGroupData[{
+Cell[18849, 492, 952, 26, 94, "Input",ExpressionUUID->"547c4f59-ea20-4627-8dce-f06dcc4194b8"],
+Cell[19804, 520, 1964, 39, 321, "Output",ExpressionUUID->"f6b5cba3-6a4e-42c9-96cc-86ad0f278f98"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[21802, 564, 363, 7, 40, "Subsubsection",ExpressionUUID->"91b4832d-1009-4e45-84d3-0f32b3ee90b4"],
+Cell[22168, 573, 326, 7, 58, "Text",ExpressionUUID->"198c6ccf-8864-4d58-adcd-fa3b8584c54c"],
+Cell[CellGroupData[{
+Cell[22519, 584, 637, 19, 33, InheritFromParent,ExpressionUUID->"50978169-387d-47c5-bcde-981336d43d2f"],
+Cell[23159, 605, 671, 19, 37, "Output",ExpressionUUID->"93982677-28f8-42a2-bf48-9741fdbfc18a"]
+}, {2}]],
+Cell[23842, 627, 499, 9, 81, "Text",ExpressionUUID->"d468bb68-5bf8-487a-877a-10eb4994a977"],
+Cell[CellGroupData[{
+Cell[24366, 640, 1734, 44, 241, "Input",ExpressionUUID->"afb8f6c8-88ed-4f14-827b-7deda57b178d"],
+Cell[26103, 686, 2463, 49, 347, "Output",ExpressionUUID->"bcb402c8-c8dc-4d15-9116-17f776a52212"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28612, 741, 187, 3, 45, "Subsubsection",ExpressionUUID->"2eeabd28-8d76-4be3-9046-6e3150b86da4"],
+Cell[28802, 746, 461, 9, 81, "Text",ExpressionUUID->"6ebbcc5a-a861-4fd6-be38-9baed2e8a497"],
+Cell[CellGroupData[{
+Cell[29288, 759, 4039, 108, 640, "Input",ExpressionUUID->"4749b358-ad8c-4000-b444-342110d9ec84"],
+Cell[33330, 869, 3468, 66, 445, "Output",ExpressionUUID->"3939234b-56b2-4a19-ba9c-5c1bd57d3ae2"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[36832, 940, 2399, 66, 325, "Input",ExpressionUUID->"88e7a558-86e6-4a1f-a340-78c0ba812a8a"],
+Cell[39234, 1008, 3488, 66, 447, "Output",ExpressionUUID->"3bfab4b3-3337-4129-adcb-d46d56d70b5a"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42768, 1080, 160, 3, 45, "Subsubsection",ExpressionUUID->"01117ff4-60d2-4308-82d5-54bc1e2ebc0d"],
+Cell[42931, 1085, 890, 14, 150, "Text",ExpressionUUID->"618264a7-d66c-4420-a421-ce748bedc971"],
+Cell[CellGroupData[{
+Cell[43846, 1103, 8766, 225, 1123, "Input",ExpressionUUID->"8176f2e5-e136-478f-9478-2bc09bf1cf66"],
+Cell[52615, 1330, 5834, 110, 308, "Output",ExpressionUUID->"ce67824f-41e6-4a72-9bee-27f5dec43a09"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
