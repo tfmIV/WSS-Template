@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     64475,       1564]
-NotebookOptionsPosition[     58517,       1447]
-NotebookOutlinePosition[     59511,       1481]
-CellTagsIndexPosition[     59442,       1476]
+NotebookDataLength[     75814,       1827]
+NotebookOptionsPosition[     69859,       1710]
+NotebookOutlinePosition[     70853,       1744]
+CellTagsIndexPosition[     70784,       1739]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -514,26 +514,28 @@ Cell[BoxData[{
        RowBox[{"\"\<Velocity Ratio\>\"", ",", "\"\<Mass Ratio\>\""}], 
        "}"}]}]}], "]"}], ",", 
    RowBox[{"{", 
-    RowBox[{"ExhaustVelocity", ",", "1", ",", "10"}], "}"}]}], 
-  "]"}]}], "Input",
- CellLabel->"In[51]:=",ExpressionUUID->"547c4f59-ea20-4627-8dce-f06dcc4194b8"],
+    RowBox[{"ExhaustVelocity", ",", "1", ",", "10"}], "}"}], ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.770914068674601*^9, 3.7709140726783037`*^9}},
+ CellLabel->
+  "In[427]:=",ExpressionUUID->"547c4f59-ea20-4627-8dce-f06dcc4194b8"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`ExhaustVelocity$$ = 1.45, Typeset`show$$ = 
+   DynamicModuleBox[{$CellContext`ExhaustVelocity$$ = 1., Typeset`show$$ = 
     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`ExhaustVelocity$$], 1, 10}}, Typeset`size$$ = {
-    270., {76., 80.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`ExhaustVelocity$48908$$ = 0}, 
-    
+    270., {75., 78.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`ExhaustVelocity$291415$$ = 
+    0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`ExhaustVelocity$$ = 1}, 
       "ControllerVariables" :> {
         Hold[$CellContext`ExhaustVelocity$$, \
-$CellContext`ExhaustVelocity$48908$$, 0]}, 
+$CellContext`ExhaustVelocity$291415$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -545,10 +547,17 @@ $CellContext`ExhaustVelocity$$], {$CellContext`$deltaV, 0, 10}, PlotLabel ->
         AxesLabel -> {"Velocity Ratio", "Mass Ratio"}], 
       "Specifications" :> {{$CellContext`ExhaustVelocity$$, 1, 10}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{305., {113., 117.}},
+     ImageSizeCache->{305., {111., 115.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
+    Initialization:>({$CellContext`MassRatio[
+         Pattern[$CellContext`$deltaV, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]]] := 
+       Exp[$CellContext`$deltaV/$CellContext`$exhaustVelocity]}; 
+     Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
@@ -556,8 +565,9 @@ $CellContext`ExhaustVelocity$$], {$CellContext`$deltaV, 0, 10}, PlotLabel ->
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.7707569990040607`*^9},
- CellLabel->"Out[52]=",ExpressionUUID->"f6b5cba3-6a4e-42c9-96cc-86ad0f278f98"]
+ CellChangeTimes->{3.7707569990040607`*^9, 3.770914076099915*^9},
+ CellLabel->
+  "Out[428]=",ExpressionUUID->"fcf979a0-9316-4ff2-b8fe-300871458b1d"]
 }, {2}]],
 
 Cell[CellGroupData[{
@@ -623,7 +633,7 @@ Cell[BoxData[
      SubscriptBox["\[ImaginaryI]", "sp"]}]}], ")"}]}]], "Output",
  CellChangeTimes->{{3.77075808707134*^9, 3.770758102913237*^9}},
  CellLabel->"Out[96]=",ExpressionUUID->"93982677-28f8-42a2-bf48-9741fdbfc18a"]
-}, {2}]],
+}, Open  ]],
 
 Cell["\<\
 This specific impulse is a property of rocket engines, in which a higher \
@@ -680,26 +690,29 @@ Cell[BoxData[{
         "\"\<Mass Ratio vs. Velocity Ratio for Different Rocket \
 Engines\>\""}]}], "]"}]}], "]"}], ",", 
    RowBox[{"{", 
-    RowBox[{"SpecificImpulse", ",", "200", ",", "500", ",", "10"}], "}"}]}], 
-  "]"}]}], "Input",
- CellLabel->"In[53]:=",ExpressionUUID->"afb8f6c8-88ed-4f14-827b-7deda57b178d"],
+    RowBox[{"SpecificImpulse", ",", "200", ",", "500", ",", "10"}], "}"}], 
+   ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.77091409282973*^9, 3.77091409326368*^9}},
+ CellLabel->
+  "In[429]:=",ExpressionUUID->"afb8f6c8-88ed-4f14-827b-7deda57b178d"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`SpecificImpulse$$ = 210, Typeset`show$$ = 
+   DynamicModuleBox[{$CellContext`SpecificImpulse$$ = 200, Typeset`show$$ = 
     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`SpecificImpulse$$], 200, 500, 10}}, Typeset`size$$ = {
     335., {86., 90.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`SpecificImpulse$51452$$ = 0}, 
-    
+    Typeset`skipInitDone$$ = False, $CellContext`SpecificImpulse$292540$$ = 
+    0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`SpecificImpulse$$ = 200}, 
       "ControllerVariables" :> {
         Hold[$CellContext`SpecificImpulse$$, \
-$CellContext`SpecificImpulse$51452$$, 0]}, 
+$CellContext`SpecificImpulse$292540$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -725,6 +738,15 @@ $CellContext`SpecificImpulse$$, $CellContext`grav$]}, {$CellContext`$deltaV,
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
+    Initialization:>({$CellContext`MRImpulse[
+         Pattern[$CellContext`$deltaV, 
+          Blank[]], 
+         Pattern[$CellContext`$specificImpulse, 
+          Blank[]], 
+         Pattern[$CellContext`$gravity, 
+          Blank[]]] := 
+       Exp[$CellContext`$deltaV/($CellContext`$specificImpulse \
+$CellContext`$gravity)]}; Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
@@ -732,8 +754,9 @@ $CellContext`SpecificImpulse$$, $CellContext`grav$]}, {$CellContext`$deltaV,
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.770757031197618*^9},
- CellLabel->"Out[54]=",ExpressionUUID->"bcb402c8-c8dc-4d15-9116-17f776a52212"]
+ CellChangeTimes->{3.770757031197618*^9, 3.770914095194087*^9},
+ CellLabel->
+  "Out[430]=",ExpressionUUID->"cd925ada-8ee1-4665-9dd2-ec0379d1f387"]
 }, {2}]]
 }, Open  ]],
 
@@ -862,10 +885,13 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{"g", ",", "1", ",", "10", ",", "1"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"ExhaustVelocity", ",", "100", ",", "1000", ",", "100"}], "}"}]}],
-   "]"}]}], "Input",
- CellChangeTimes->{3.770757069330194*^9},
- CellLabel->"In[70]:=",ExpressionUUID->"4749b358-ad8c-4000-b444-342110d9ec84"],
+    RowBox[{"ExhaustVelocity", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.770757069330194*^9, {3.770914105308754*^9, 3.7709141056112633`*^9}},
+ CellLabel->
+  "In[431]:=",ExpressionUUID->"4749b358-ad8c-4000-b444-342110d9ec84"],
 
 Cell[BoxData[
  TagBox[
@@ -884,10 +910,10 @@ Cell[BoxData[
       Hold[$CellContext`ExhaustVelocity$$], 100, 1000, 100}}, 
     Typeset`size$$ = {270., {82., 86.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`StructuralMass$56197$$ = 
-    0, $CellContext`InitialMassPropellant$56198$$ = 
-    0, $CellContext`ExpulsionRate$56199$$ = 0, $CellContext`g$56200$$ = 
-    0, $CellContext`ExhaustVelocity$56201$$ = 0}, 
+    False, $CellContext`StructuralMass$293596$$ = 
+    0, $CellContext`InitialMassPropellant$293597$$ = 
+    0, $CellContext`ExpulsionRate$293598$$ = 0, $CellContext`g$293599$$ = 
+    0, $CellContext`ExhaustVelocity$293600$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`ExhaustVelocity$$ = 
@@ -896,14 +922,14 @@ Cell[BoxData[
         1000, $CellContext`StructuralMass$$ = 100}, 
       "ControllerVariables" :> {
         Hold[$CellContext`StructuralMass$$, \
-$CellContext`StructuralMass$56197$$, 0], 
+$CellContext`StructuralMass$293596$$, 0], 
         Hold[$CellContext`InitialMassPropellant$$, \
-$CellContext`InitialMassPropellant$56198$$, 0], 
-        Hold[$CellContext`ExpulsionRate$$, $CellContext`ExpulsionRate$56199$$,
-          0], 
-        Hold[$CellContext`g$$, $CellContext`g$56200$$, 0], 
+$CellContext`InitialMassPropellant$293597$$, 0], 
+        Hold[$CellContext`ExpulsionRate$$, \
+$CellContext`ExpulsionRate$293598$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$293599$$, 0], 
         Hold[$CellContext`ExhaustVelocity$$, \
-$CellContext`ExhaustVelocity$56201$$, 0]}, 
+$CellContext`ExhaustVelocity$293600$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -925,6 +951,55 @@ $CellContext`StructuralMass$$, $CellContext`ExhaustVelocity$$]},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
+    Initialization:>({$CellContext`vsol[
+         Pattern[$CellContext`$g, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]]] := ReplaceAll[$CellContext`v, 
+         Flatten[
+          
+          DSolve[{Derivative[
+             1][$CellContext`v][$CellContext`t] == -$CellContext`$g + \
+$CellContext`thrust[$CellContext`$expulsionRate, \
+$CellContext`$exhaustVelocity, \
+$CellContext`$initialMassPropellant][$CellContext`t]/$CellContext`massRocket[$\
+CellContext`$structuralMass, $CellContext`$initialMassPropellant, \
+$CellContext`$expulsionRate][$CellContext`t], $CellContext`v[0] == 
+            0}, $CellContext`v, $CellContext`t]]], 
+       Attributes[Derivative] = {NHoldAll}, $CellContext`thrust[
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$expulsionRate $CellContext`$exhaustVelocity, \
+$CellContext`$initialMassPropellant > $CellContext`$expulsionRate \
+$CellContext`t}, {
+          0, $CellContext`$initialMassPropellant <= \
+$CellContext`$expulsionRate $CellContext`t}}], $CellContext`massRocket[
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$structuralMass + \
+$CellContext`$initialMassPropellant - $CellContext`$expulsionRate \
+$CellContext`t, $CellContext`$initialMassPropellant > \
+$CellContext`$expulsionRate $CellContext`t}, {$CellContext`$structuralMass, \
+$CellContext`$initialMassPropellant <= $CellContext`$expulsionRate \
+$CellContext`t}}]}; Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
@@ -932,8 +1007,10 @@ $CellContext`StructuralMass$$, $CellContext`ExhaustVelocity$$]},
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.770757072287977*^9, 3.770757122528926*^9}},
- CellLabel->"Out[73]=",ExpressionUUID->"3939234b-56b2-4a19-ba9c-5c1bd57d3ae2"]
+ CellChangeTimes->{{3.770757072287977*^9, 3.770757122528926*^9}, 
+   3.770914106185443*^9},
+ CellLabel->
+  "Out[434]=",ExpressionUUID->"4ec5d0ea-4abf-4cf5-9cbb-952d8495ccbc"]
 }, {2}]],
 
 Cell[CellGroupData[{
@@ -999,12 +1076,15 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{"g", ",", "2", ",", "20", ",", "1"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"ExhaustVelocity", ",", "1000", ",", "3000", ",", "100"}], 
-    "}"}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+    RowBox[{"ExhaustVelocity", ",", "1000", ",", "3000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.770757166235629*^9, 3.770757172698078*^9}, {
-  3.7707583384993877`*^9, 3.7707583559471292`*^9}},
+  3.7707583384993877`*^9, 3.7707583559471292`*^9}, {3.7709141149991903`*^9, 
+  3.770914115309223*^9}},
  CellLabel->
-  "In[104]:=",ExpressionUUID->"88e7a558-86e6-4a1f-a340-78c0ba812a8a"],
+  "In[435]:=",ExpressionUUID->"88e7a558-86e6-4a1f-a340-78c0ba812a8a"],
 
 Cell[BoxData[
  TagBox[
@@ -1023,10 +1103,10 @@ Cell[BoxData[
       Hold[$CellContext`ExhaustVelocity$$], 1000, 3000, 100}}, 
     Typeset`size$$ = {270., {82., 85.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`StructuralMass$134167$$ = 
-    0, $CellContext`InitialMassPropellant$134168$$ = 
-    0, $CellContext`ExpulsionRate$134169$$ = 0, $CellContext`g$134170$$ = 
-    0, $CellContext`ExhaustVelocity$134171$$ = 0}, 
+    False, $CellContext`StructuralMass$293987$$ = 
+    0, $CellContext`InitialMassPropellant$293988$$ = 
+    0, $CellContext`ExpulsionRate$293989$$ = 0, $CellContext`g$293990$$ = 
+    0, $CellContext`ExhaustVelocity$293991$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`ExhaustVelocity$$ = 
@@ -1034,14 +1114,14 @@ Cell[BoxData[
         2, $CellContext`InitialMassPropellant$$ = 
         50000, $CellContext`StructuralMass$$ = 50000}, "ControllerVariables" :> {
         Hold[$CellContext`StructuralMass$$, \
-$CellContext`StructuralMass$134167$$, 0], 
+$CellContext`StructuralMass$293987$$, 0], 
         Hold[$CellContext`InitialMassPropellant$$, \
-$CellContext`InitialMassPropellant$134168$$, 0], 
+$CellContext`InitialMassPropellant$293988$$, 0], 
         Hold[$CellContext`ExpulsionRate$$, \
-$CellContext`ExpulsionRate$134169$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$134170$$, 0], 
+$CellContext`ExpulsionRate$293989$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$293990$$, 0], 
         Hold[$CellContext`ExhaustVelocity$$, \
-$CellContext`ExhaustVelocity$134171$$, 0]}, 
+$CellContext`ExhaustVelocity$293991$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1063,6 +1143,74 @@ $CellContext`StructuralMass$$, $CellContext`ExhaustVelocity$$]},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
+    Initialization:>({$CellContext`xsol[
+         Pattern[$CellContext`$g, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]]] := ReplaceAll[$CellContext`x, 
+         Flatten[
+          
+          NDSolve[{
+           Derivative[
+             1][$CellContext`x][$CellContext`t] == \
+$CellContext`vsol[$CellContext`$g, $CellContext`$expulsionRate, \
+$CellContext`$initialMassPropellant, $CellContext`$structuralMass, \
+$CellContext`$exhaustVelocity][$CellContext`t], $CellContext`x[0] == 
+            0}, $CellContext`x, {$CellContext`t, 0, 5}]]], 
+       Attributes[Derivative] = {NHoldAll}, $CellContext`vsol[
+         Pattern[$CellContext`$g, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]]] := ReplaceAll[$CellContext`v, 
+         Flatten[
+          
+          DSolve[{Derivative[
+             1][$CellContext`v][$CellContext`t] == -$CellContext`$g + \
+$CellContext`thrust[$CellContext`$expulsionRate, \
+$CellContext`$exhaustVelocity, \
+$CellContext`$initialMassPropellant][$CellContext`t]/$CellContext`massRocket[$\
+CellContext`$structuralMass, $CellContext`$initialMassPropellant, \
+$CellContext`$expulsionRate][$CellContext`t], $CellContext`v[0] == 
+            0}, $CellContext`v, $CellContext`t]]], $CellContext`thrust[
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$expulsionRate $CellContext`$exhaustVelocity, \
+$CellContext`$initialMassPropellant > $CellContext`$expulsionRate \
+$CellContext`t}, {
+          0, $CellContext`$initialMassPropellant <= \
+$CellContext`$expulsionRate $CellContext`t}}], $CellContext`massRocket[
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$structuralMass + \
+$CellContext`$initialMassPropellant - $CellContext`$expulsionRate \
+$CellContext`t, $CellContext`$initialMassPropellant > \
+$CellContext`$expulsionRate $CellContext`t}, {$CellContext`$structuralMass, \
+$CellContext`$initialMassPropellant <= $CellContext`$expulsionRate \
+$CellContext`t}}]}; Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
@@ -1070,9 +1218,10 @@ $CellContext`StructuralMass$$, $CellContext`ExhaustVelocity$$]},
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.7707571734393673`*^9, 3.770758357779276*^9},
+ CellChangeTimes->{3.7707571734393673`*^9, 3.770758357779276*^9, 
+  3.770914116481435*^9},
  CellLabel->
-  "Out[105]=",ExpressionUUID->"3bfab4b3-3337-4129-adcb-d46d56d70b5a"]
+  "Out[436]=",ExpressionUUID->"706355af-6aba-4cc9-ac3a-9ea08852d957"]
 }, {2}]]
 }, Open  ]],
 
@@ -1322,12 +1471,14 @@ Cell[BoxData[{
     RowBox[{"ExpulsionRate2", ",", "100", ",", "1000", ",", "100"}], "}"}], 
    ",", 
    RowBox[{"{", 
-    RowBox[{"ExhaustVelocity2", ",", "100", ",", "1000", ",", "100"}], 
-    "}"}]}], "]"}]}], "Input",
+    RowBox[{"ExhaustVelocity2", ",", "100", ",", "1000", ",", "100"}], "}"}], 
+   ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.770722756683261*^9, 3.770722758409795*^9}, 
-   3.7707572420278788`*^9, {3.7707581699402943`*^9, 3.770758266295315*^9}},
+   3.7707572420278788`*^9, {3.7707581699402943`*^9, 3.770758266295315*^9}, {
+   3.770914125908334*^9, 3.7709141262284727`*^9}},
  CellLabel->
-  "In[115]:=",ExpressionUUID->"8176f2e5-e136-478f-9478-2bc09bf1cf66"],
+  "In[437]:=",ExpressionUUID->"8176f2e5-e136-478f-9478-2bc09bf1cf66"],
 
 Cell[BoxData[
  TagBox[
@@ -1353,14 +1504,14 @@ Cell[BoxData[
       Hold[$CellContext`ExhaustVelocity2$$], 100, 1000, 100}}, 
     Typeset`size$$ = {270., {80., 84.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`StructuralMass1$142373$$ = 
-    0, $CellContext`InitialMassPropellant1$142374$$ = 
-    0, $CellContext`ExpulsionRate1$142375$$ = 0, $CellContext`g$142376$$ = 
-    0, $CellContext`ExhaustVelocity1$142377$$ = 
-    0, $CellContext`StructuralMass2$142378$$ = 
-    0, $CellContext`InitialMassPropellant2$142379$$ = 
-    0, $CellContext`ExpulsionRate2$142380$$ = 
-    0, $CellContext`ExhaustVelocity2$142381$$ = 0}, 
+    False, $CellContext`StructuralMass1$294563$$ = 
+    0, $CellContext`InitialMassPropellant1$294564$$ = 
+    0, $CellContext`ExpulsionRate1$294565$$ = 0, $CellContext`g$294566$$ = 
+    0, $CellContext`ExhaustVelocity1$294567$$ = 
+    0, $CellContext`StructuralMass2$294568$$ = 
+    0, $CellContext`InitialMassPropellant2$294569$$ = 
+    0, $CellContext`ExpulsionRate2$294570$$ = 
+    0, $CellContext`ExhaustVelocity2$294571$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`ExhaustVelocity1$$ = 
@@ -1373,22 +1524,22 @@ Cell[BoxData[
         100, $CellContext`StructuralMass2$$ = 100}, 
       "ControllerVariables" :> {
         Hold[$CellContext`StructuralMass1$$, \
-$CellContext`StructuralMass1$142373$$, 0], 
+$CellContext`StructuralMass1$294563$$, 0], 
         Hold[$CellContext`InitialMassPropellant1$$, \
-$CellContext`InitialMassPropellant1$142374$$, 0], 
+$CellContext`InitialMassPropellant1$294564$$, 0], 
         Hold[$CellContext`ExpulsionRate1$$, \
-$CellContext`ExpulsionRate1$142375$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$142376$$, 0], 
+$CellContext`ExpulsionRate1$294565$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$294566$$, 0], 
         Hold[$CellContext`ExhaustVelocity1$$, \
-$CellContext`ExhaustVelocity1$142377$$, 0], 
+$CellContext`ExhaustVelocity1$294567$$, 0], 
         Hold[$CellContext`StructuralMass2$$, \
-$CellContext`StructuralMass2$142378$$, 0], 
+$CellContext`StructuralMass2$294568$$, 0], 
         Hold[$CellContext`InitialMassPropellant2$$, \
-$CellContext`InitialMassPropellant2$142379$$, 0], 
+$CellContext`InitialMassPropellant2$294569$$, 0], 
         Hold[$CellContext`ExpulsionRate2$$, \
-$CellContext`ExpulsionRate2$142380$$, 0], 
+$CellContext`ExpulsionRate2$294570$$, 0], 
         Hold[$CellContext`ExhaustVelocity2$$, \
-$CellContext`ExhaustVelocity2$142381$$, 0]}, 
+$CellContext`ExhaustVelocity2$294571$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1429,6 +1580,118 @@ $CellContext`t}}]}, {$CellContext`t, 0, 30}, PlotRange -> All]],
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
+    Initialization:>({$CellContext`vsolFirst[
+         Pattern[$CellContext`$g, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass2, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant2, 
+          Blank[]]] := ReplaceAll[$CellContext`v, 
+         Flatten[
+          
+          DSolve[{Derivative[
+             1][$CellContext`v][$CellContext`t] == -$CellContext`$g + \
+$CellContext`thrustFirst[$CellContext`$expulsionRate, \
+$CellContext`$exhaustVelocity, \
+$CellContext`$initialMassPropellant][$CellContext`t]/$CellContext`\
+massFirstRocket[$CellContext`$structuralMass, \
+$CellContext`$initialMassPropellant, $CellContext`$expulsionRate, \
+$CellContext`$structuralMass2, \
+$CellContext`$initialMassPropellant2][$CellContext`t], $CellContext`v[0] == 
+            0}, $CellContext`v, $CellContext`t]]], 
+       Attributes[Derivative] = {NHoldAll}, $CellContext`thrustFirst[
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$expulsionRate $CellContext`$exhaustVelocity, \
+$CellContext`$initialMassPropellant > $CellContext`$expulsionRate \
+$CellContext`t}, {
+          0, $CellContext`$initialMassPropellant <= \
+$CellContext`$expulsionRate $CellContext`t}}], $CellContext`massFirstRocket[
+         Pattern[$CellContext`$structuralMass, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass2, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant2, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$structuralMass + \
+$CellContext`$initialMassPropellant + $CellContext`$initialMassPropellant2 + \
+$CellContext`$structuralMass2 - $CellContext`$expulsionRate $CellContext`t, \
+$CellContext`$initialMassPropellant > $CellContext`$expulsionRate \
+$CellContext`t}, {$CellContext`$structuralMass, \
+$CellContext`$initialMassPropellant <= $CellContext`$expulsionRate \
+$CellContext`t}}], $CellContext`vsolSecond[
+         Pattern[$CellContext`$g, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate2, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant2, 
+          Blank[]], 
+         Pattern[$CellContext`$structuralMass2, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity2, 
+          Blank[]], 
+         Pattern[$CellContext`$initialVelocity, 
+          Blank[]]] := ReplaceAll[$CellContext`v, 
+         Flatten[
+          
+          DSolve[{Derivative[
+             1][$CellContext`v][$CellContext`t] == -$CellContext`$g + \
+$CellContext`thrustSecond[$CellContext`$expulsionRate2, \
+$CellContext`$exhaustVelocity2, \
+$CellContext`$initialMassPropellant2][$CellContext`t]/$CellContext`\
+massSecondRocket[$CellContext`$structuralMass2, \
+$CellContext`$initialMassPropellant2, \
+$CellContext`$expulsionRate2][$CellContext`t], $CellContext`v[
+             0] == $CellContext`$initialVelocity}, $CellContext`v, \
+$CellContext`t]]], $CellContext`thrustSecond[
+         Pattern[$CellContext`$expulsionRate2, 
+          Blank[]], 
+         Pattern[$CellContext`$exhaustVelocity2, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant2, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$expulsionRate2 \
+$CellContext`$exhaustVelocity2, $CellContext`$initialMassPropellant2 > \
+$CellContext`$expulsionRate2 $CellContext`t}, {
+          0, $CellContext`$initialMassPropellant2 <= \
+$CellContext`$expulsionRate2 $CellContext`t}}], $CellContext`massSecondRocket[
+        
+         Pattern[$CellContext`$structuralMass2, 
+          Blank[]], 
+         Pattern[$CellContext`$initialMassPropellant2, 
+          Blank[]], 
+         Pattern[$CellContext`$expulsionRate2, 
+          Blank[]]][
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       Piecewise[{{$CellContext`$structuralMass2 + \
+$CellContext`$initialMassPropellant2 - $CellContext`$expulsionRate2 \
+$CellContext`t, $CellContext`$initialMassPropellant2 > \
+$CellContext`$expulsionRate2 $CellContext`t}, {$CellContext`$structuralMass2, \
+$CellContext`$initialMassPropellant2 <= $CellContext`$expulsionRate2 \
+$CellContext`t}}]}; Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
@@ -1437,9 +1700,9 @@ $CellContext`t}}]}, {$CellContext`t, 0, 30}, PlotRange -> All]],
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{{3.770757243319242*^9, 3.770757259898271*^9}, 
-   3.770758267976821*^9, 3.7707587341315327`*^9},
+   3.770758267976821*^9, 3.7707587341315327`*^9, 3.770914126810341*^9},
  CellLabel->
-  "Out[121]=",ExpressionUUID->"264f364c-262a-4bc9-a4d6-d0c517618511"]
+  "Out[443]=",ExpressionUUID->"4bcd6729-3306-455d-a9d8-c437a2419c21"]
 }, {2}]]
 }, Open  ]]
 }, Open  ]]
@@ -1475,7 +1738,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 59303, 1470}
+ {"Title", 70645, 1733}
  }
 *)
 (*NotebookFileOutline
@@ -1528,40 +1791,40 @@ Cell[CellGroupData[{
 Cell[16014, 436, 161, 3, 41, "Subsection",ExpressionUUID->"baa9e950-a6fc-4811-838c-58bb34a41885"],
 Cell[16178, 441, 2646, 47, 48, "Text",ExpressionUUID->"f3f1cb7f-b837-42c6-8003-0c3527f68041"],
 Cell[CellGroupData[{
-Cell[18849, 492, 952, 26, 70, "Input",ExpressionUUID->"547c4f59-ea20-4627-8dce-f06dcc4194b8"],
-Cell[19804, 520, 1962, 39, 245, "Output",ExpressionUUID->"f6b5cba3-6a4e-42c9-96cc-86ad0f278f98"]
+Cell[18849, 492, 1078, 28, 61, "Input",ExpressionUUID->"547c4f59-ea20-4627-8dce-f06dcc4194b8"],
+Cell[19930, 522, 2268, 47, 241, "Output",ExpressionUUID->"fcf979a0-9316-4ff2-b8fe-300871458b1d"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[21800, 564, 363, 7, 31, "Subsubsection",ExpressionUUID->"91b4832d-1009-4e45-84d3-0f32b3ee90b4"],
-Cell[22166, 573, 326, 7, 27, "Text",ExpressionUUID->"198c6ccf-8864-4d58-adcd-fa3b8584c54c"],
+Cell[22232, 574, 363, 7, 31, "Subsubsection",ExpressionUUID->"91b4832d-1009-4e45-84d3-0f32b3ee90b4"],
+Cell[22598, 583, 326, 7, 27, "Text",ExpressionUUID->"198c6ccf-8864-4d58-adcd-fa3b8584c54c"],
 Cell[CellGroupData[{
-Cell[22517, 584, 637, 19, 24, InheritFromParent,ExpressionUUID->"50978169-387d-47c5-bcde-981336d43d2f"],
-Cell[23157, 605, 671, 19, 28, "Output",ExpressionUUID->"93982677-28f8-42a2-bf48-9741fdbfc18a"]
-}, {2}]],
-Cell[23840, 627, 499, 9, 46, "Text",ExpressionUUID->"d468bb68-5bf8-487a-877a-10eb4994a977"],
+Cell[22949, 594, 637, 19, 25, "Input",ExpressionUUID->"50978169-387d-47c5-bcde-981336d43d2f"],
+Cell[23589, 615, 671, 19, 28, "Output",ExpressionUUID->"93982677-28f8-42a2-bf48-9741fdbfc18a"]
+}, Open  ]],
+Cell[24275, 637, 499, 9, 46, "Text",ExpressionUUID->"d468bb68-5bf8-487a-877a-10eb4994a977"],
 Cell[CellGroupData[{
-Cell[24364, 640, 1734, 44, 180, "Input",ExpressionUUID->"afb8f6c8-88ed-4f14-827b-7deda57b178d"],
-Cell[26101, 686, 2461, 49, 265, "Output",ExpressionUUID->"bcb402c8-c8dc-4d15-9116-17f776a52212"]
+Cell[24799, 650, 1860, 47, 97, "Input",ExpressionUUID->"afb8f6c8-88ed-4f14-827b-7deda57b178d"],
+Cell[26662, 699, 2851, 59, 265, "Output",ExpressionUUID->"cd925ada-8ee1-4665-9dd2-ec0379d1f387"]
 }, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28608, 741, 187, 3, 34, "Subsubsection",ExpressionUUID->"2eeabd28-8d76-4be3-9046-6e3150b86da4"],
-Cell[28798, 746, 461, 9, 46, "Text",ExpressionUUID->"6ebbcc5a-a861-4fd6-be38-9baed2e8a497"],
+Cell[29559, 764, 187, 3, 34, "Subsubsection",ExpressionUUID->"2eeabd28-8d76-4be3-9046-6e3150b86da4"],
+Cell[29749, 769, 461, 9, 46, "Text",ExpressionUUID->"6ebbcc5a-a861-4fd6-be38-9baed2e8a497"],
 Cell[CellGroupData[{
-Cell[29284, 759, 4039, 108, 480, "Input",ExpressionUUID->"4749b358-ad8c-4000-b444-342110d9ec84"],
-Cell[33326, 869, 3466, 66, 345, "Output",ExpressionUUID->"3939234b-56b2-4a19-ba9c-5c1bd57d3ae2"]
+Cell[30235, 782, 4152, 111, 215, "Input",ExpressionUUID->"4749b358-ad8c-4000-b444-342110d9ec84"],
+Cell[34390, 895, 5664, 117, 345, "Output",ExpressionUUID->"4ec5d0ea-4abf-4cf5-9cbb-952d8495ccbc"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[36826, 940, 2399, 66, 243, "Input",ExpressionUUID->"88e7a558-86e6-4a1f-a340-78c0ba812a8a"],
-Cell[39228, 1008, 3486, 66, 343, "Output",ExpressionUUID->"3bfab4b3-3337-4129-adcb-d46d56d70b5a"]
+Cell[40088, 1017, 2509, 69, 108, "Input",ExpressionUUID->"88e7a558-86e6-4a1f-a340-78c0ba812a8a"],
+Cell[42600, 1088, 6454, 135, 343, "Output",ExpressionUUID->"706355af-6aba-4cc9-ac3a-9ea08852d957"]
 }, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42760, 1080, 160, 3, 34, "Subsubsection",ExpressionUUID->"01117ff4-60d2-4308-82d5-54bc1e2ebc0d"],
-Cell[42923, 1085, 890, 14, 64, "Text",ExpressionUUID->"618264a7-d66c-4420-a421-ce748bedc971"],
+Cell[49100, 1229, 160, 3, 34, "Subsubsection",ExpressionUUID->"01117ff4-60d2-4308-82d5-54bc1e2ebc0d"],
+Cell[49263, 1234, 890, 14, 64, "Text",ExpressionUUID->"618264a7-d66c-4420-a421-ce748bedc971"],
 Cell[CellGroupData[{
-Cell[43838, 1103, 8770, 226, 506, "Input",ExpressionUUID->"8176f2e5-e136-478f-9478-2bc09bf1cf66"],
-Cell[52611, 1331, 5857, 110, 243, "Output",ExpressionUUID->"264f364c-262a-4bc9-a4d6-d0c517618511"]
+Cell[50178, 1252, 8878, 228, 506, "Input",ExpressionUUID->"8176f2e5-e136-478f-9478-2bc09bf1cf66"],
+Cell[59059, 1482, 10751, 222, 301, "Output",ExpressionUUID->"4bcd6729-3306-455d-a9d8-c437a2419c21"]
 }, {2}]]
 }, Open  ]]
 }, Open  ]]
