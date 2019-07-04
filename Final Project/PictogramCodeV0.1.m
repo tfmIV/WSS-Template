@@ -16,6 +16,23 @@ distributer[img_Image, numberOfItems_, imageSpacing_, displayWidth_] :=
 	AppendTo[table, Table[img, numberOfItems - (numberRows - 1) * lengthOfRows]];
 	Return[table]
 	];
+	
+distributer[img_Graphics|img_Graphics3D, numberOfItems_, imageSpacing_, displayWidth_] := 
+	Module[{
+	lengthOfRows, 
+	numberRows, 
+	table, 
+	row,
+	widthOfImage = ImageDimensions[img][[1]]
+	},
+	
+	lengthOfRows = Floor[displayWidth/(widthOfImage + 2 * imageSpacing)];
+	numberRows = Ceiling[numberOfItems/(lengthOfRows)];
+	row = Table[img, lengthOfRows];
+	table = Table[row, numberRows - 1];
+	AppendTo[table, Table[img, numberOfItems - (numberRows - 1) * lengthOfRows]];
+	Return[table]
+	];
 
 createRow[img_Image, numberItems_, separation_, displayWidth_, width_] :=
 	Module[{resizedImage,imgGrid},
@@ -34,49 +51,67 @@ createRow[img_Image, numberItems_, separation_, displayWidth_, width_] :=
 				],
 			ItemSize->{0,0},
 			Spacings->{0,0}
-			];
-			
-		Rasterize[imgGrid]
-	]
+			];	
+		imgGrid
+	];
+	
+createRow[img_Graphics|img_Graphics3D, numberItems_, separation_, displayWidth_, width_] :=
+	Module[{imgGrid},
+		imgGrid = 
+			GraphicsGrid[
+				distributer[
+					img,
+					numberItems,
+					separation,
+					displayWidth
+				]
+			];	
+		imgGrid
+	];
 
-Pictogram[img_Image, numbers_List, opts:OptionsPattern[{"DisplayWidth"-> 500, "ImageWidth"->Automatic, "Separation"->0, "TableHeadings"->None,"Magnification"->1}]] := 
+Pictogram[img_Image|img_Graphics3D|img_Graphics, numbers_List, opts:
+	OptionsPattern[{"DisplayWidth"->500, "ItemWidth"->Automatic, "Separation"->0, "TableHeadings"->None, "Magnification"->1, "TableDirections"->Column, "Background"->White}]] := 
 	Module[
-		{imgAssociation,
+		{imgAssociationMagnified,
 		imgList, 
 		magnifiedList, 
 		separation = OptionValue["Separation"], 
 		displayWidth = OptionValue["DisplayWidth"], 
-		imgWidth = OptionValue["ImageWidth"],
+		imgWidth = OptionValue["ItemWidth"],
 		tableHeadings = OptionValue["TableHeadings"],
-		mag = OptionValue["Magnification"]
+		tableDirections = OptionValue["TableDirections"],
+		mag = OptionValue["Magnification"],
+		bg = OptionValue["Background"]
 		},
-		imgAssociation = 
+		(*How do I clean this up...nested map?*)
+		imgAssociationMagnified = 
 			Map[
-				(createRow[
+				Magnify[#,mag]&/@(createRow[
 					img, #, separation, displayWidth, imgWidth
 				]->#)&, numbers
 			];
-		imgList = Keys[imgAssociation];
+		imgList = Keys[imgAssociationMagnified];
 		magnifiedList = 
 				{Map[
 					Tooltip[
 						Framed[
-							Image[
-								#, Magnification->mag
-							]
+							#
 						]
-						,Lookup[imgAssociation,#]
+						,Lookup[imgAssociationMagnified,#]
 					]&,
 					imgList
 				]};
 		
-		TableForm[
-			Transpose[
-				magnifiedList
-				],
-			TableHeadings -> tableHeadings
+		Style[
+			TableForm[
+				Transpose[
+					magnifiedList
+					],
+				TableHeadings -> tableHeadings,TableDirections->Column
+			],Background->bg
 		]
 	];	
+
 
 interpretWord[str_String] :=
 	SemanticInterpretation[str]["Image"]
