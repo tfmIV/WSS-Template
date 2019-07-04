@@ -1,6 +1,5 @@
 (* Pictogram lib definitions *)
 
-
 distributer[img_Image, numberOfItems_, imageSpacing_, displayWidth_] := 
 	Module[{
 	lengthOfRows, 
@@ -19,7 +18,12 @@ distributer[img_Image, numberOfItems_, imageSpacing_, displayWidth_] :=
 	];
 
 createRow[img_Image, numberItems_, separation_, displayWidth_, width_] :=
-	Module[{resizedImage = ImageResize[img, width],imgGrid},
+	Module[{resizedImage,imgGrid},
+		If[
+			width != "Automatic", 
+			resizedImage = ImageResize[img, width], 
+			resizedImage = img
+		];
 		imgGrid = 
 			Grid[
 				distributer[
@@ -35,7 +39,7 @@ createRow[img_Image, numberItems_, separation_, displayWidth_, width_] :=
 		Rasterize[imgGrid]
 	]
 
-Pictogram[img_Image, numbers_List, opts:OptionsPattern[{"DisplayWidth"-> 500, "ImageWidth"->50, "Separation"->0, "TableHeadings"->None}]] := 
+Pictogram[img_Image, numbers_List, opts:OptionsPattern[{"DisplayWidth"-> 500, "ImageWidth"->Automatic, "Separation"->0, "TableHeadings"->None,"Magnification"->1}]] := 
 	Module[
 		{imgAssociation,
 		imgList, 
@@ -43,7 +47,8 @@ Pictogram[img_Image, numbers_List, opts:OptionsPattern[{"DisplayWidth"-> 500, "I
 		separation = OptionValue["Separation"], 
 		displayWidth = OptionValue["DisplayWidth"], 
 		imgWidth = OptionValue["ImageWidth"],
-		tableHeadings = OptionValue["TableHeadings"]
+		tableHeadings = OptionValue["TableHeadings"],
+		mag = OptionValue["Magnification"]
 		},
 		imgAssociation = 
 			Map[
@@ -57,7 +62,7 @@ Pictogram[img_Image, numbers_List, opts:OptionsPattern[{"DisplayWidth"-> 500, "I
 					Tooltip[
 						Framed[
 							Image[
-								#, Magnification->1
+								#, Magnification->mag
 							]
 						]
 						,Lookup[imgAssociation,#]
@@ -72,8 +77,6 @@ Pictogram[img_Image, numbers_List, opts:OptionsPattern[{"DisplayWidth"-> 500, "I
 			TableHeadings -> tableHeadings
 		]
 	];	
-
-
 
 interpretWord[str_String] :=
 	SemanticInterpretation[str]["Image"]
